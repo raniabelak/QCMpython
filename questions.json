@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "id": 2,
+      "name": "phy",
+      "questions": []
+    },
+    {
+      "id": 3,
+      "name": "foot",
+      "questions": []
+    },
+    {
+      "id": 4,
+      "name": "cat",
+      "questions": []
+    }
+  ]
+}

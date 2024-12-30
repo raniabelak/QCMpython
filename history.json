@@ -1,0 +1,179 @@
+[
+    {
+        "id": 1,
+        "user_id": 5,
+        "category": "Football",
+        "questions": [
+            {
+                "question": "Which club won the first-ever UEFA Champions League title in 1956?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which footballer holds the record for most assists in a single Premier League season?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which club is nicknamed \"The Bhoys\"?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which team won the first-ever Premier League title?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which player holds the record for the most appearances in the FIFA World Cup?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2006?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country won the UEFA Euro 2016 championship?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the regulation size of a football pitch?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2010?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the maximum number of substitutions allowed in a football match as of 2023?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "6/10",
+        "date": "2024-12-30 20:21:06.900426"
+    },
+    {
+        "id": 2,
+        "user_id": 5,
+        "category": "geography",
+        "questions": [
+            {
+                "question": "Which city is the capital of Egypt?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country is known as the Pearl of Africa?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country has the most islands in the world?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the capital of Italy?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the capital of Japan?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which is the tallest building in the world?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the capital of Australia?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which river flows through London?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country is known for the Great Barrier Reef?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the largest country in Africa by area?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "5/10",
+        "date": "2024-12-30 20:22:39.724669"
+    },
+    {
+        "id": 3,
+        "user_id": 2,
+        "category": "entertainment",
+        "questions": [
+            {
+                "question": "Which of the following is a famous video game character?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which creature is known as the king of the jungle?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which superhero is known for his iconic shield?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which superhero can shrink to the size of an ant?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the name of the famous wizard in the Harry Potter series?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which fruit is known for having its seeds on the outside?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What shape is a basketball?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the largest species of bird?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the name of the famous wizarding school in Harry Potter?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which color do you get when you mix red and yellow?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "4/10",
+        "date": "2024-12-30 20:49:55.805167"
+    }
+]

@@ -1,0 +1,274 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Football",
+        "questions": [
+          {
+            "id": 1,
+            "question": "Who won the FIFA World Cup in 2018?",
+            "options": [
+              { "id": "a", "text": "France" },
+              { "id": "b", "text": "Croatia" },
+              { "id": "c", "text": "Brazil" },
+              { "id": "d", "text": "Germany" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 2,
+            "question": "Which player has won the most Ballon d'Or awards?",
+            "options": [
+              { "id": "a", "text": "Cristiano Ronaldo" },
+              { "id": "b", "text": "Lionel Messi" },
+              { "id": "c", "text": "Michel Platini" },
+              { "id": "d", "text": "Johan Cruyff" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 3,
+            "question": "What is the official nickname of Brazil's national football team?",
+            "options": [
+              { "id": "a", "text": "La Selección" },
+              { "id": "b", "text": "Azzurri" },
+              { "id": "c", "text": "Seleção" },
+              { "id": "d", "text": "Les Bleus" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 4,
+            "question": "Which country hosted the FIFA World Cup in 2006?",
+            "options": [
+              { "id": "a", "text": "Germany" },
+              { "id": "b", "text": "South Africa" },
+              { "id": "c", "text": "Japan" },
+              { "id": "d", "text": "Brazil" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 5,
+            "question": "Which club has won the most UEFA Champions League titles?",
+            "options": [
+              { "id": "a", "text": "FC Barcelona" },
+              { "id": "b", "text": "Manchester United" },
+              { "id": "c", "text": "AC Milan" },
+              { "id": "d", "text": "Real Madrid" }
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 6,
+            "question": "Who holds the record for the most goals in a single FIFA World Cup tournament?",
+            "options": [
+              { "id": "a", "text": "Miroslav Klose" },
+              { "id": "b", "text": "Just Fontaine" },
+              { "id": "c", "text": "Pele" },
+              { "id": "d", "text": "Gerd Müller" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 7,
+            "question": "Which player scored the \"Hand of God\" goal?",
+            "options": [
+              { "id": "a", "text": "Diego Maradona" },
+              { "id": "b", "text": "Pele" },
+              { "id": "c", "text": "Zinedine Zidane" },
+              { "id": "d", "text": "David Beckham" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 8,
+            "question": "In what year was the English Premier League founded?",
+            "options": [
+              { "id": "a", "text": "1988" },
+              { "id": "b", "text": "1992" },
+              { "id": "c", "text": "1996" },
+              { "id": "d", "text": "2000" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 9,
+            "question": "What is the maximum duration of extra time in a football match?",
+            "options": [
+              { "id": "a", "text": "15 minutes" },
+              { "id": "b", "text": "20 minutes" },
+              { "id": "c", "text": "30 minutes" },
+              { "id": "d", "text": "45 minutes" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 10,
+            "question": "Which footballer is known as \"The King\"?",
+            "options": [
+              { "id": "a", "text": "Diego Maradona" },
+              { "id": "b", "text": "Lionel Messi" },
+              { "id": "c", "text": "Pele" },
+              { "id": "d", "text": "Cristiano Ronaldo" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 11,
+            "question": "What color cards can a referee show during a football match?",
+            "options": [
+              { "id": "a", "text": "Yellow and Green" },
+              { "id": "b", "text": "Red and Green" },
+              { "id": "c", "text": "Yellow and Red" },
+              { "id": "d", "text": "Blue and Red" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 12,
+            "question": "Which country won the first-ever FIFA World Cup in 1930?",
+            "options": [
+              { "id": "a", "text": "Brazil" },
+              { "id": "b", "text": "Uruguay" },
+              { "id": "c", "text": "Argentina" },
+              { "id": "d", "text": "Italy" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 13,
+            "question": "What is the regulation size of a football pitch?",
+            "options": [
+              { "id": "a", "text": "90-120 meters in length, 45-90 meters in width" },
+              { "id": "b", "text": "100-130 meters in length, 50-100 meters in width" },
+              { "id": "c", "text": "105-120 meters in length, 68 meters in width" },
+              { "id": "d", "text": "100-110 meters in length, 65-70 meters in width" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 14,
+            "question": "Who scored the fastest goal in FIFA World Cup history?",
+            "options": [
+              { "id": "a", "text": "Hakan Şükür" },
+              { "id": "b", "text": "Pelé" },
+              { "id": "c", "text": "Cristiano Ronaldo" },
+              { "id": "d", "text": "Zinedine Zidane" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 15,
+            "question": "Which football team is known as \"The Red Devils\"?",
+            "options": [
+              { "id": "a", "text": "Liverpool" },
+              { "id": "b", "text": "Manchester United" },
+              { "id": "c", "text": "Belgium National Team" },
+              { "id": "d", "text": "AC Milan" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 16,
+            "question": "Which country has won the most FIFA World Cups?",
+            "options": [
+              { "id": "a", "text": "Italy" },
+              { "id": "b", "text": "Germany" },
+              { "id": "c", "text": "Argentina" },
+              { "id": "d", "text": "Brazil" }
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 17,
+            "question": "Which footballer was nicknamed \"The Divine Ponytail\"?",
+            "options": [
+              { "id": "a", "text": "Andrea Pirlo" },
+              { "id": "b", "text": "Roberto Baggio" },
+              { "id": "c", "text": "Francesco Totti" },
+              { "id": "d", "text": "Gianfranco Zola" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 18,
+            "question": "Which country is often referred to as \"The Land of Football\"?",
+            "options": [
+              { "id": "a", "text": "Argentina" },
+              { "id": "b", "text": "Brazil" },
+              { "id": "c", "text": "Italy" },
+              { "id": "d", "text": "England" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 19,
+            "question": "What year was the first-ever FIFA Women's World Cup held?",
+            "options": [
+              { "id": "a", "text": "1991" },
+              { "id": "b", "text": "1987" },
+              { "id": "c", "text": "1995" },
+              { "id": "d", "text": "2000" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 20,
+            "question": "Who is the all-time top scorer in UEFA Champions League history?",
+            "options": [
+              { "id": "a", "text": "Cristiano Ronaldo" },
+              { "id": "b", "text": "Lionel Messi" },
+              { "id": "c", "text": "Raúl" },
+              { "id": "d", "text": "Karim Benzema" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 21,
+            "question": "Which team won the first-ever Premier League title?",
+            "options": [
+              { "id": "a", "text": "Manchester United" },
+              { "id": "b", "text": "Arsenal" },
+              { "id": "c", "text": "Chelsea" },
+              { "id": "d", "text": "Blackburn Rovers" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 22,
+            "question": "Which player scored the most goals in a calendar year?",
+            "options": [
+              { "id": "a", "text": "Lionel Messi" },
+              { "id": "b", "text": "Cristiano Ronaldo" },
+              { "id": "c", "text": "Pele" },
+              { "id": "d", "text": "Gerd Müller" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 23,
+            "question": "Which country hosted the FIFA World Cup in 2010?",
+            "options": [
+              { "id": "a", "text": "Brazil" },
+              { "id": "b", "text": "South Africa" },
+              { "id": "c", "text": "Germany" },
+              { "id": "d", "text": "Russia" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 24,
+            "question": "Who is the youngest player to score in a FIFA World Cup?",
+            "options": [
+              { "id": "a", "text": "Pelé" },
+              { "id": "b", "text": "Kylian Mbappé" },
+              { "id": "c", "text": "Michael Owen" },
+              { "id": "d", "text": "Lionel Messi" }
+            ],
+            "correct_answer": "a"
+          }
+         ]
+        }
+       ]
+      }  

@@ -267,8 +267,2520 @@
               { "id": "d", "text": "Lionel Messi" }
             ],
             "correct_answer": "a"
+          },
+          {
+            "id": 25,
+            "question": "Which team has won the most English Premier League titles?",
+            "options": [
+              { "id": "a", "text": "Manchester United" },
+              { "id": "b", "text": "Liverpool" },
+              { "id": "c", "text": "Arsenal" },
+              { "id": "d", "text": "Chelsea" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 26,
+            "question": "Which country won the UEFA Euro 2016 championship?",
+            "options": [
+              { "id": "a", "text": "France" },
+              { "id": "b", "text": "Portugal" },
+              { "id": "c", "text": "Germany" },
+              { "id": "d", "text": "Spain" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 27,
+            "question": "Who scored the winning goal in the 2010 FIFA World Cup final?",
+            "options": [
+              { "id": "a", "text": "David Villa" },
+              { "id": "b", "text": "Andrés Iniesta" },
+              { "id": "c", "text": "Xavi" },
+              { "id": "d", "text": "Fernando Torres" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 28,
+            "question": "Which stadium is commonly known as \"The Theatre of Dreams\"?",
+            "options": [
+              { "id": "a", "text": "Camp Nou" },
+              { "id": "b", "text": "Anfield" },
+              { "id": "c", "text": "Old Trafford" },
+              { "id": "d", "text": "Wembley" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 29,
+            "question": "What is the official size of a football? (FIFA Standards)",
+            "options": [
+              { "id": "a", "text": "Size 4" },
+              { "id": "b", "text": "Size 5" },
+              { "id": "c", "text": "Size 6" },
+              { "id": "d", "text": "Size 7" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 30,
+            "question": "Which footballer is known for the phrase \"Why always me?\"",
+            "options": [
+              { "id": "a", "text": "Mario Balotelli" },
+              { "id": "b", "text": "Zlatan Ibrahimović" },
+              { "id": "c", "text": "Neymar" },
+              { "id": "d", "text": "Paul Pogba" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 31,
+            "question": "Who won the Golden Boot in the 2014 FIFA World Cup?",
+            "options": [
+              { "id": "a", "text": "Lionel Messi" },
+              { "id": "b", "text": "James Rodríguez" },
+              { "id": "c", "text": "Thomas Müller" },
+              { "id": "d", "text": "Neymar" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 32,
+            "question": "Which country has appeared in the most FIFA World Cup finals?",
+            "options": [
+              { "id": "a", "text": "Brazil" },
+              { "id": "b", "text": "Germany" },
+              { "id": "c", "text": "Italy" },
+              { "id": "d", "text": "Argentina" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 33,
+            "question": "What is the name of Arsenal’s home stadium?",
+            "options": [
+              { "id": "a", "text": "Stamford Bridge" },
+              { "id": "b", "text": "White Hart Lane" },
+              { "id": "c", "text": "Emirates Stadium" },
+              { "id": "d", "text": "Old Trafford" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 34,
+            "question": "Which footballer is known as \"El Fenomeno\"?",
+            "options": [
+              { "id": "a", "text": "Ronaldo Nazário" },
+              { "id": "b", "text": "Ronaldinho" },
+              { "id": "c", "text": "Zico" },
+              { "id": "d", "text": "Romário" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 35,
+            "question": "Which footballer holds the record for most assists in a single Premier League season?",
+            "options": [
+              { "id": "a", "text": "Kevin De Bruyne" },
+              { "id": "b", "text": "Thierry Henry" },
+              { "id": "c", "text": "Cesc Fàbregas" },
+              { "id": "d", "text": "Ryan Giggs" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 36,
+            "question": "Who won the FIFA Women's World Cup in 2019?",
+            "options": [
+              { "id": "a", "text": "USA" },
+              { "id": "b", "text": "Netherlands" },
+              { "id": "c", "text": "England" },
+              { "id": "d", "text": "France" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 37,
+            "question": "Which club is known as \"The Old Lady\"?",
+            "options": [
+              { "id": "a", "text": "AC Milan" },
+              { "id": "b", "text": "Inter Milan" },
+              { "id": "c", "text": "Juventus" },
+              { "id": "d", "text": "Roma" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 38,
+            "question": "Who is the only goalkeeper to have won the Ballon d'Or?",
+            "options": [
+              { "id": "a", "text": "Manuel Neuer" },
+              { "id": "b", "text": "Gianluigi Buffon" },
+              { "id": "c", "text": "Lev Yashin" },
+              { "id": "d", "text": "Iker Casillas" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 39,
+            "question": "Which player holds the record for the most appearances in the FIFA World Cup?",
+            "options": [
+              { "id": "a", "text": "Lothar Matthäus" },
+              { "id": "b", "text": "Pele" },
+              { "id": "c", "text": "Diego Maradona" },
+              { "id": "d", "text": "Lionel Messi" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 40,
+            "question": "Which club won the first-ever UEFA Champions League title in 1956?",
+            "options": [
+              { "id": "a", "text": "AC Milan" },
+              { "id": "b", "text": "Real Madrid" },
+              { "id": "c", "text": "Benfica" },
+              { "id": "d", "text": "Ajax" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 41,
+            "question": "What is the nickname of the Spanish national football team?",
+            "options": [
+              { "id": "a", "text": "La Roja" },
+              { "id": "b", "text": "The Red Fury" },
+              { "id": "c", "text": "La Furia Roja" },
+              { "id": "d", "text": "All of the above" }
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 42,
+            "question": "Who holds the record for the most consecutive Premier League wins?",
+            "options": [
+              { "id": "a", "text": "Manchester City" },
+              { "id": "b", "text": "Liverpool" },
+              { "id": "c", "text": "Chelsea" },
+              { "id": "d", "text": "Manchester United" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 43,
+            "question": "Which player scored the infamous \"Panenka\" penalty?",
+            "options": [
+              { "id": "a", "text": "Antonín Panenka" },
+              { "id": "b", "text": "Zinedine Zidane" },
+              { "id": "c", "text": "Francesco Totti" },
+              { "id": "d", "text": "Andrea Pirlo" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 44,
+            "question": "What is the largest margin of victory in FIFA World Cup history?",
+            "options": [
+              { "id": "a", "text": "9-0" },
+              { "id": "b", "text": "10-0" },
+              { "id": "c", "text": "11-0" },
+              { "id": "d", "text": "12-0" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 45,
+            "question": "Which team is known as \"Die Mannschaft\"?",
+            "options": [
+              { "id": "a", "text": "Germany" },
+              { "id": "b", "text": "Austria" },
+              { "id": "c", "text": "Switzerland" },
+              { "id": "d", "text": "Netherlands" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 46,
+            "question": "Which player is nicknamed \"CR7\"?",
+            "options": [
+              { "id": "a", "text": "Cristiano Ronaldo" },
+              { "id": "b", "text": "Carlos Tevez" },
+              { "id": "c", "text": "Cesc Fàbregas" },
+              { "id": "d", "text": "Casemiro" }
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 47,
+            "question": "What year did Barcelona win their first treble?",
+            "options": [
+              { "id": "a", "text": "2006" },
+              { "id": "b", "text": "2009" },
+              { "id": "c", "text": "2011" },
+              { "id": "d", "text": "2015" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 48,
+            "question": "What is the maximum number of substitutions allowed in a football match as of 2023?",
+            "options": [
+              { "id": "a", "text": "3" },
+              { "id": "b", "text": "5" },
+              { "id": "c", "text": "4" },
+              { "id": "d", "text": "6" }
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 49,
+            "question": "Which African nation reached the quarterfinals of the FIFA World Cup in 1990?",
+            "options": [
+              { "id": "a", "text": "Nigeria" },
+              { "id": "b", "text": "Ghana" },
+              { "id": "c", "text": "Cameroon" },
+              { "id": "d", "text": "Ivory Coast" }
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 50,
+            "question": "Which club is nicknamed \"The Bhoys\"?",
+            "options": [
+              { "id": "a", "text": "Celtic FC" },
+              { "id": "b", "text": "Rangers FC" },
+              { "id": "c", "text": "Aberdeen" },
+              { "id": "d", "text": "Hibernian" }
+            ],
+            "correct_answer": "a"
           }
          ]
-        }
-       ]
+      },
+      {
+        "id": 2,
+        "name": "geography",
+        "questions": [
+          {
+            "id": 1,
+            "question": "What is the capital of France?",
+            "options": [
+              {"id": "a", "text": "Berlin"},
+              {"id": "b", "text": "Paris"},
+              {"id": "c", "text": "Rome"},
+              {"id": "d", "text": "Madrid"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 2,
+            "question": "Which country is the largest by land area?",
+            "options": [
+              {"id": "a", "text": "United States"},
+              {"id": "b", "text": "Russia"},
+              {"id": "c", "text": "Canada"},
+              {"id": "d", "text": "China"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 3,
+            "question": "What is the longest river in the world?",
+            "options": [
+              {"id": "a", "text": "Amazon"},
+              {"id": "b", "text": "Nile"},
+              {"id": "c", "text": "Yangtze"},
+              {"id": "d", "text": "Mississippi"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 4,
+            "question": "Which continent is the Sahara Desert located in?",
+            "options": [
+              {"id": "a", "text": "Africa"},
+              {"id": "b", "text": "Asia"},
+              {"id": "c", "text": "Australia"},
+              {"id": "d", "text": "North America"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 5,
+            "question": "What is the smallest country in the world by land area?",
+            "options": [
+              {"id": "a", "text": "Monaco"},
+              {"id": "b", "text": "Vatican City"},
+              {"id": "c", "text": "San Marino"},
+              {"id": "d", "text": "Liechtenstein"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 6,
+            "question": "Which country has the most islands in the world?",
+            "options": [
+              {"id": "a", "text": "Sweden"},
+              {"id": "b", "text": "Finland"},
+              {"id": "c", "text": "Canada"},
+              {"id": "d", "text": "Indonesia"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 7,
+            "question": "Which ocean is the largest?",
+            "options": [
+              {"id": "a", "text": "Atlantic Ocean"},
+              {"id": "b", "text": "Pacific Ocean"},
+              {"id": "c", "text": "Indian Ocean"},
+              {"id": "d", "text": "Arctic Ocean"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 8,
+            "question": "Which mountain is the highest in the world?",
+            "options": [
+              {"id": "a", "text": "Mount Everest"},
+              {"id": "b", "text": "K2"},
+              {"id": "c", "text": "Kangchenjunga"},
+              {"id": "d", "text": "Mount Kilimanjaro"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 9,
+            "question": "What is the capital of Japan?",
+            "options": [
+              {"id": "a", "text": "Seoul"},
+              {"id": "b", "text": "Beijing"},
+              {"id": "c", "text": "Tokyo"},
+              {"id": "d", "text": "Kyoto"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 10,
+            "question": "Which country is known as the Land of the Rising Sun?",
+            "options": [
+              {"id": "a", "text": "China"},
+              {"id": "b", "text": "Japan"},
+              {"id": "c", "text": "Thailand"},
+              {"id": "d", "text": "South Korea"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 11,
+            "question": "What is the largest desert in the world?",
+            "options": [
+              {"id": "a", "text": "Karakum Desert"},
+              {"id": "b", "text": "Atacama Desert"},
+              {"id": "c", "text": "Sahara Desert"},
+              {"id": "d", "text": "Gobi Desert"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 12,
+            "question": "What is the capital of Australia?",
+            "options": [
+              {"id": "a", "text": "Sydney"},
+              {"id": "b", "text": "Melbourne"},
+              {"id": "c", "text": "Canberra"},
+              {"id": "d", "text": "Brisbane"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 13,
+            "question": "Which is the tallest waterfall in the world?",
+            "options": [
+              {"id": "a", "text": "Niagara Falls"},
+              {"id": "b", "text": "Angel Falls"},
+              {"id": "c", "text": "Victoria Falls"},
+              {"id": "d", "text": "Iguazu Falls"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 14,
+            "question": "Which country has the most volcanoes?",
+            "options": [
+              {"id": "a", "text": "Italy"},
+              {"id": "b", "text": "Indonesia"},
+              {"id": "c", "text": "Japan"},
+              {"id": "d", "text": "United States"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 15,
+            "question": "What is the capital of Brazil?",
+            "options": [
+              {"id": "a", "text": "Rio de Janeiro"},
+              {"id": "b", "text": "Brasília"},
+              {"id": "c", "text": "São Paulo"},
+              {"id": "d", "text": "Salvador"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 16,
+            "question": "Which river flows through Cairo?",
+            "options": [
+              {"id": "a", "text": "Amazon River"},
+              {"id": "b", "text": "Nile River"},
+              {"id": "c", "text": "Ganges River"},
+              {"id": "d", "text": "Yangtze River"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 17,
+            "question": "Which country is known for the Great Barrier Reef?",
+            "options": [
+              {"id": "a", "text": "United States"},
+              {"id": "b", "text": "Australia"},
+              {"id": "c", "text": "New Zealand"},
+              {"id": "d", "text": "Mexico"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 18,
+            "question": "Which is the largest continent by population?",
+            "options": [
+              {"id": "a", "text": "Africa"},
+              {"id": "b", "text": "Asia"},
+              {"id": "c", "text": "Europe"},
+              {"id": "d", "text": "North America"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 19,
+            "question": "Which is the longest mountain range in the world?",
+            "options": [
+              {"id": "a", "text": "Himalayas"},
+              {"id": "b", "text": "Andes"},
+              {"id": "c", "text": "Rocky Mountains"},
+              {"id": "d", "text": "Alps"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 20,
+            "question": "Which river is known as the lifeblood of Egypt?",
+            "options": [
+              {"id": "a", "text": "Amazon River"},
+              {"id": "b", "text": "Mississippi River"},
+              {"id": "c", "text": "Nile River"},
+              {"id": "d", "text": "Ganges River"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 21,
+            "question": "Which city is the capital of Canada?",
+            "options": [
+              {"id": "a", "text": "Toronto"},
+              {"id": "b", "text": "Ottawa"},
+              {"id": "c", "text": "Montreal"},
+              {"id": "d", "text": "Vancouver"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 22,
+            "question": "Which country has the longest coastline?",
+            "options": [
+              {"id": "a", "text": "Australia"},
+              {"id": "b", "text": "Canada"},
+              {"id": "c", "text": "United States"},
+              {"id": "d", "text": "Russia"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 23,
+            "question": "Which country is the largest island in the world?",
+            "options": [
+              {"id": "a", "text": "Greenland"},
+              {"id": "b", "text": "Australia"},
+              {"id": "c", "text": "Indonesia"},
+              {"id": "d", "text": "New Zealand"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 24,
+            "question": "What is the capital of Italy?",
+            "options": [
+              {"id": "a", "text": "Rome"},
+              {"id": "b", "text": "Florence"},
+              {"id": "c", "text": "Venice"},
+              {"id": "d", "text": "Milan"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 25,
+            "question": "Which country has the most pyramids in the world?",
+            "options": [
+              {"id": "a", "text": "Egypt"},
+              {"id": "b", "text": "Sudan"},
+              {"id": "c", "text": "Mexico"},
+              {"id": "d", "text": "Peru"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 26,
+            "question": "What is the largest island in the Mediterranean Sea?",
+            "options": [
+              {"id": "a", "text": "Cyprus"},
+              {"id": "b", "text": "Crete"},
+              {"id": "c", "text": "Sicily"},
+              {"id": "d", "text": "Malta"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 27,
+            "question": "Which country is the source of the Amazon River?",
+            "options": [
+              {"id": "a", "text": "Colombia"},
+              {"id": "b", "text": "Peru"},
+              {"id": "c", "text": "Brazil"},
+              {"id": "d", "text": "Venezuela"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 28,
+            "question": "Which country is known as the Land of the Midnight Sun?",
+            "options": [
+              {"id": "a", "text": "Sweden"},
+              {"id": "b", "text": "Norway"},
+              {"id": "c", "text": "Finland"},
+              {"id": "d", "text": "Iceland"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 29,
+            "question": "Which mountain range separates Europe and Asia?",
+            "options": [
+              {"id": "a", "text": "Himalayas"},
+              {"id": "b", "text": "Urals"},
+              {"id": "c", "text": "Andes"},
+              {"id": "d", "text": "Rockies"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 30,
+            "question": "Which country has the most time zones?",
+            "options": [
+              {"id": "a", "text": "United States"},
+              {"id": "b", "text": "Russia"},
+              {"id": "c", "text": "Canada"},
+              {"id": "d", "text": "China"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 31,
+            "question": "Which river flows through Paris?",
+            "options": [
+              {"id": "a", "text": "Seine"},
+              {"id": "b", "text": "Rhine"},
+              {"id": "c", "text": "Danube"},
+              {"id": "d", "text": "Loire"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 32,
+            "question": "Which country has the most UNESCO World Heritage Sites?",
+            "options": [
+              {"id": "a", "text": "Italy"},
+              {"id": "b", "text": "China"},
+              {"id": "c", "text": "Spain"},
+              {"id": "d", "text": "Germany"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 33,
+            "question": "Which country is known as the Pearl of Africa?",
+            "options": [
+              {"id": "a", "text": "Uganda"},
+              {"id": "b", "text": "Kenya"},
+              {"id": "c", "text": "Tanzania"},
+              {"id": "d", "text": "Rwanda"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 34,
+            "question": "Which country is the second-largest producer of coffee in the world?",
+            "options": [
+              {"id": "a", "text": "Brazil"},
+              {"id": "b", "text": "Vietnam"},
+              {"id": "c", "text": "Colombia"},
+              {"id": "d", "text": "Indonesia"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 35,
+            "question": "Which is the smallest continent?",
+            "options": [
+              {"id": "a", "text": "Europe"},
+              {"id": "b", "text": "Australia"},
+              {"id": "c", "text": "Antarctica"},
+              {"id": "d", "text": "South America"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 36,
+            "question": "Which city is the capital of Egypt?",
+            "options": [
+              {"id": "a", "text": "Cairo"},
+              {"id": "b", "text": "Alexandria"},
+              {"id": "c", "text": "Giza"},
+              {"id": "d", "text": "Luxor"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 37,
+            "question": "Which is the deepest ocean in the world?",
+            "options": [
+              {"id": "a", "text": "Atlantic Ocean"},
+              {"id": "b", "text": "Pacific Ocean"},
+              {"id": "c", "text": "Indian Ocean"},
+              {"id": "d", "text": "Arctic Ocean"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 38,
+            "question": "Which is the longest river in North America?",
+            "options": [
+              {"id": "a", "text": "Missouri River"},
+              {"id": "b", "text": "Mississippi River"},
+              {"id": "c", "text": "Mackenzie River"},
+              {"id": "d", "text": "Yukon River"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 39,
+            "question": "Which city is the capital of India?",
+            "options": [
+              {"id": "a", "text": "Mumbai"},
+              {"id": "b", "text": "Delhi"},
+              {"id": "c", "text": "Kolkata"},
+              {"id": "d", "text": "Chennai"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 40,
+            "question": "Which desert is the largest in North America?",
+            "options": [
+              {"id": "a", "text": "Great Basin Desert"},
+              {"id": "b", "text": "Sonoran Desert"},
+              {"id": "c", "text": "Mojave Desert"},
+              {"id": "d", "text": "Chihuahuan Desert"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 41,
+            "question": "Which country is bordered by both the Atlantic and Pacific Oceans?",
+            "options": [
+              {"id": "a", "text": "Mexico"},
+              {"id": "b", "text": "Colombia"},
+              {"id": "c", "text": "Costa Rica"},
+              {"id": "d", "text": "Panama"}
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 42,
+            "question": "Which river flows through London?",
+            "options": [
+              {"id": "a", "text": "Thames"},
+              {"id": "b", "text": "Seine"},
+              {"id": "c", "text": "Danube"},
+              {"id": "d", "text": "Rhine"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 43,
+            "question": "What is the largest country in Africa by area?",
+            "options": [
+              {"id": "a", "text": "Nigeria"},
+              {"id": "b", "text": "Sudan"},
+              {"id": "c", "text": "Algeria"},
+              {"id": "d", "text": "Egypt"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 44,
+            "question": "Which is the smallest ocean in the world?",
+            "options": [
+              {"id": "a", "text": "Atlantic Ocean"},
+              {"id": "b", "text": "Indian Ocean"},
+              {"id": "c", "text": "Arctic Ocean"},
+              {"id": "d", "text": "Pacific Ocean"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 45,
+            "question": "Which country is the largest producer of olive oil?",
+            "options": [
+              {"id": "a", "text": "Greece"},
+              {"id": "b", "text": "Italy"},
+              {"id": "c", "text": "Turkey"},
+              {"id": "d", "text": "Spain"}
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 46,
+            "question": "Which country has the most lakes?",
+            "options": [
+              {"id": "a", "text": "United States"},
+              {"id": "b", "text": "Canada"},
+              {"id": "c", "text": "Russia"},
+              {"id": "d", "text": "Finland"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 47,
+            "question": "Which is the largest country in South America?",
+            "options": [
+              {"id": "a", "text": "Argentina"},
+              {"id": "b", "text": "Brazil"},
+              {"id": "c", "text": "Peru"},
+              {"id": "d", "text": "Colombia"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 48,
+            "question": "Which is the tallest building in the world?",
+            "options": [
+              {"id": "a", "text": "Shanghai Tower"},
+              {"id": "b", "text": "Burj Khalifa"},
+              {"id": "c", "text": "One World Trade Center"},
+              {"id": "d", "text": "Petronas Towers"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 49,
+            "question": "Which river forms part of the border between the United States and Mexico?",
+            "options": [
+              {"id": "a", "text": "Rio Grande"},
+              {"id": "b", "text": "Colorado River"},
+              {"id": "c", "text": "Mississippi River"},
+              {"id": "d", "text": "Columbia River"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 50,
+            "question": "Which country has the longest land border?",
+            "options": [
+              {"id": "a", "text": "Russia"},
+              {"id": "b", "text": "China"},
+              {"id": "c", "text": "United States"},
+              {"id": "d", "text": "Canada"}
+            ],
+            "correct_answer": "a"
+          }
+        ]
+      },
+      {
+        "id":3,
+        "name":"history",
+        "questions": [
+            {
+              "id": 1,
+              "question": "Who was the first President of the United States?",
+              "options": [
+                {"id": "a", "text": "George Washington"},
+                {"id": "b", "text": "Thomas Jefferson"},
+                {"id": "c", "text": "Abraham Lincoln"},
+                {"id": "d", "text": "John Adams"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 2,
+              "question": "In which year did World War I begin?",
+              "options": [
+                {"id": "a", "text": "1912"},
+                {"id": "b", "text": "1914"},
+                {"id": "c", "text": "1916"},
+                {"id": "d", "text": "1918"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 3,
+              "question": "Which civilization built the pyramids of Giza?",
+              "options": [
+                {"id": "a", "text": "Ancient Greeks"},
+                {"id": "b", "text": "Ancient Romans"},
+                {"id": "c", "text": "Ancient Egyptians"},
+                {"id": "d", "text": "Ancient Mesopotamians"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 4,
+              "question": "Who was the first emperor of China?",
+              "options": [
+                {"id": "a", "text": "Emperor Wu"},
+                {"id": "b", "text": "Emperor Qin Shi Huang"},
+                {"id": "c", "text": "Emperor Taizong"},
+                {"id": "d", "text": "Emperor Tang Taizong"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 5,
+              "question": "Which event marked the start of the French Revolution?",
+              "options": [
+                {"id": "a", "text": "The storming of the Bastille"},
+                {"id": "b", "text": "The execution of Louis XVI"},
+                {"id": "c", "text": "The signing of the Declaration of the Rights of Man"},
+                {"id": "d", "text": "The rise of Napoleon Bonaparte"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 6,
+              "question": "Who was the British Prime Minister during World War II?",
+              "options": [
+                {"id": "a", "text": "Winston Churchill"},
+                {"id": "b", "text": "Neville Chamberlain"},
+                {"id": "c", "text": "Clement Attlee"},
+                {"id": "d", "text": "Edward Heath"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 7,
+              "question": "Which empire was ruled by Julius Caesar?",
+              "options": [
+                {"id": "a", "text": "Roman Empire"},
+                {"id": "b", "text": "Byzantine Empire"},
+                {"id": "c", "text": "Ottoman Empire"},
+                {"id": "d", "text": "Mongol Empire"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 8,
+              "question": "Which country was the birthplace of the Renaissance?",
+              "options": [
+                {"id": "a", "text": "France"},
+                {"id": "b", "text": "Italy"},
+                {"id": "c", "text": "Germany"},
+                {"id": "d", "text": "Spain"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 9,
+              "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+              "options": [
+                {"id": "a", "text": "Amelia Earhart"},
+                {"id": "b", "text": "Bessie Coleman"},
+                {"id": "c", "text": "Harriet Quimby"},
+                {"id": "d", "text": "Jacqueline Cochran"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 10,
+              "question": "Who discovered America in 1492?",
+              "options": [
+                {"id": "a", "text": "Christopher Columbus"},
+                {"id": "b", "text": "John Cabot"},
+                {"id": "c", "text": "Leif Erikson"},
+                {"id": "d", "text": "Amerigo Vespucci"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 11,
+              "question": "Which country did the United States fight in the Vietnam War?",
+              "options": [
+                {"id": "a", "text": "China"},
+                {"id": "b", "text": "Vietnam"},
+                {"id": "c", "text": "North Korea"},
+                {"id": "d", "text": "Cambodia"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 12,
+              "question": "In what year did the Berlin Wall fall?",
+              "options": [
+                {"id": "a", "text": "1985"},
+                {"id": "b", "text": "1989"},
+                {"id": "c", "text": "1991"},
+                {"id": "d", "text": "1995"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 13,
+              "question": "Which battle was a turning point in the American Civil War?",
+              "options": [
+                {"id": "a", "text": "Battle of Gettysburg"},
+                {"id": "b", "text": "Battle of Antietam"},
+                {"id": "c", "text": "Battle of Fort Sumter"},
+                {"id": "d", "text": "Battle of Bull Run"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 14,
+              "question": "What ancient civilization created the first known writing system?",
+              "options": [
+                {"id": "a", "text": "Sumerians"},
+                {"id": "b", "text": "Egyptians"},
+                {"id": "c", "text": "Indus Valley Civilization"},
+                {"id": "d", "text": "Ancient Chinese"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 15,
+              "question": "What year did the Titanic sink?",
+              "options": [
+                {"id": "a", "text": "1910"},
+                {"id": "b", "text": "1912"},
+                {"id": "c", "text": "1914"},
+                {"id": "d", "text": "1916"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 16,
+              "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+              "options": [
+                {"id": "a", "text": "Leonid Brezhnev"},
+                {"id": "b", "text": "Joseph Stalin"},
+                {"id": "c", "text": "Nikita Khrushchev"},
+                {"id": "d", "text": "Mikhail Gorbachev"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 17,
+              "question": "Which war was fought between the North and South regions of the United States?",
+              "options": [
+                {"id": "a", "text": "War of 1812"},
+                {"id": "b", "text": "World War I"},
+                {"id": "c", "text": "American Civil War"},
+                {"id": "d", "text": "Spanish-American War"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 18,
+              "question": "Who was the first female Prime Minister of the United Kingdom?",
+              "options": [
+                {"id": "a", "text": "Margaret Thatcher"},
+                {"id": "b", "text": "Theresa May"},
+                {"id": "c", "text": "Queen Elizabeth II"},
+                {"id": "d", "text": "Priti Patel"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 19,
+              "question": "Who was the ancient Greek philosopher who taught Alexander the Great?",
+              "options": [
+                {"id": "a", "text": "Socrates"},
+                {"id": "b", "text": "Plato"},
+                {"id": "c", "text": "Aristotle"},
+                {"id": "d", "text": "Homer"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 20,
+              "question": "Which country was the birthplace of the ancient Olympic Games?",
+              "options": [
+                {"id": "a", "text": "Italy"},
+                {"id": "b", "text": "Greece"},
+                {"id": "c", "text": "Egypt"},
+                {"id": "d", "text": "Turkey"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 21,
+              "question": "In which year did the United States declare independence from Great Britain?",
+              "options": [
+                {"id": "a", "text": "1775"},
+                {"id": "b", "text": "1776"},
+                {"id": "c", "text": "1781"},
+                {"id": "d", "text": "1787"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 22,
+              "question": "Which event marked the end of World War II in Europe?",
+              "options": [
+                {"id": "a", "text": "The invasion of Normandy"},
+                {"id": "b", "text": "The fall of Berlin"},
+                {"id": "c", "text": "The Battle of Stalingrad"},
+                {"id": "d", "text": "The signing of the Treaty of Versailles"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 23,
+              "question": "Which U.S. president signed the Emancipation Proclamation?",
+              "options": [
+                {"id": "a", "text": "Abraham Lincoln"},
+                {"id": "b", "text": "Andrew Johnson"},
+                {"id": "c", "text": "Thomas Jefferson"},
+                {"id": "d", "text": "George Washington"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 24,
+              "question": "Which year did the American Civil War officially end?",
+              "options": [
+                {"id": "a", "text": "1863"},
+                {"id": "b", "text": "1865"},
+                {"id": "c", "text": "1867"},
+                {"id": "d", "text": "1870"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 25,
+              "question": "Who was the first man to step on the moon?",
+              "options": [
+                {"id": "a", "text": "Neil Armstrong"},
+                {"id": "b", "text": "Buzz Aldrin"},
+                {"id": "c", "text": "Yuri Gagarin"},
+                {"id": "d", "text": "Michael Collins"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 26,
+              "question": "What empire was ruled by Genghis Khan?",
+              "options": [
+                {"id": "a", "text": "Roman Empire"},
+                {"id": "b", "text": "Mongol Empire"},
+                {"id": "c", "text": "Ottoman Empire"},
+                {"id": "d", "text": "Persian Empire"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 27,
+              "question": "Which leader is associated with the rise of Nazi Germany?",
+              "options": [
+                {"id": "a", "text": "Adolf Hitler"},
+                {"id": "b", "text": "Benito Mussolini"},
+                {"id": "c", "text": "Joseph Stalin"},
+                {"id": "d", "text": "Emperor Hirohito"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 28,
+              "question": "Which revolution occurred in France in 1789?",
+              "options": [
+                {"id": "a", "text": "French Revolution"},
+                {"id": "b", "text": "Russian Revolution"},
+                {"id": "c", "text": "American Revolution"},
+                {"id": "d", "text": "Industrial Revolution"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 29,
+              "question": "Which country was the first to give women the right to vote?",
+              "options": [
+                {"id": "a", "text": "United States"},
+                {"id": "b", "text": "New Zealand"},
+                {"id": "c", "text": "United Kingdom"},
+                {"id": "d", "text": "Sweden"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 30,
+              "question": "Which war was fought between 1950 and 1953 on the Korean Peninsula?",
+              "options": [
+                {"id": "a", "text": "Korean War"},
+                {"id": "b", "text": "Vietnam War"},
+                {"id": "c", "text": "World War II"},
+                {"id": "d", "text": "Cold War"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 31,
+              "question": "Who was the British monarch during the American Revolution?",
+              "options": [
+                {"id": "a", "text": "George III"},
+                {"id": "b", "text": "Henry VIII"},
+                {"id": "c", "text": "Queen Elizabeth I"},
+                {"id": "d", "text": "Victoria"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 32,
+              "question": "Which battle marked the turning point of the American Revolution?",
+              "options": [
+                {"id": "a", "text": "Battle of Bunker Hill"},
+                {"id": "b", "text": "Battle of Saratoga"},
+                {"id": "c", "text": "Battle of Yorktown"},
+                {"id": "d", "text": "Battle of Trenton"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 33,
+              "question": "Which empire was known for its advanced aqueduct systems?",
+              "options": [
+                {"id": "a", "text": "Ancient Rome"},
+                {"id": "b", "text": "Ancient Egypt"},
+                {"id": "c", "text": "Aztec Empire"},
+                {"id": "d", "text": "Ming Dynasty"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 34,
+              "question": "In what year did the Soviet Union collapse?",
+              "options": [
+                {"id": "a", "text": "1985"},
+                {"id": "b", "text": "1990"},
+                {"id": "c", "text": "1991"},
+                {"id": "d", "text": "1993"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 35,
+              "question": "Which explorer first circumnavigated the globe?",
+              "options": [
+                {"id": "a", "text": "Christopher Columbus"},
+                {"id": "b", "text": "Ferdinand Magellan"},
+                {"id": "c", "text": "Marco Polo"},
+                {"id": "d", "text": "Vasco da Gama"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 36,
+              "question": "Which U.S. president was assassinated in 1963?",
+              "options": [
+                {"id": "a", "text": "John F. Kennedy"},
+                {"id": "b", "text": "Abraham Lincoln"},
+                {"id": "c", "text": "Richard Nixon"},
+                {"id": "d", "text": "Lyndon B. Johnson"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 37,
+              "question": "Who was the famous leader of the Indian independence movement?",
+              "options": [
+                {"id": "a", "text": "Mahatma Gandhi"},
+                {"id": "b", "text": "Jawaharlal Nehru"},
+                {"id": "c", "text": "Subhas Chandra Bose"},
+                {"id": "d", "text": "Indira Gandhi"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 38,
+              "question": "What was the name of the ship that brought the Pilgrims to America in 1620?",
+              "options": [
+                {"id": "a", "text": "Mayflower"},
+                {"id": "b", "text": "Santa Maria"},
+                {"id": "c", "text": "The Discovery"},
+                {"id": "d", "text": "Endeavour"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 39,
+              "question": "Who was the first female monarch of England?",
+              "options": [
+                {"id": "a", "text": "Queen Victoria"},
+                {"id": "b", "text": "Queen Elizabeth I"},
+                {"id": "c", "text": "Mary I"},
+                {"id": "d", "text": "Queen Anne"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 40,
+              "question": "Which historical figure was known as the 'Iron Lady'?",
+              "options": [
+                {"id": "a", "text": "Margaret Thatcher"},
+                {"id": "b", "text": "Indira Gandhi"},
+                {"id": "c", "text": "Golda Meir"},
+                {"id": "d", "text": "Eleanor Roosevelt"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 41,
+              "question": "Which nation was the first to land a human on the moon?",
+              "options": [
+                {"id": "a", "text": "Soviet Union"},
+                {"id": "b", "text": "United States"},
+                {"id": "c", "text": "China"},
+                {"id": "d", "text": "India"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 42,
+              "question": "Who was the longest-reigning monarch in British history?",
+              "options": [
+                {"id": "a", "text": "Queen Elizabeth I"},
+                {"id": "b", "text": "Queen Elizabeth II"},
+                {"id": "c", "text": "Queen Victoria"},
+                {"id": "d", "text": "King George III"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 43,
+              "question": "Which ancient civilization is known for building Machu Picchu?",
+              "options": [
+                {"id": "a", "text": "Aztec"},
+                {"id": "b", "text": "Inca"},
+                {"id": "c", "text": "Mayan"},
+                {"id": "d", "text": "Olmec"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 44,
+              "question": "Which country was formerly known as Persia?",
+              "options": [
+                {"id": "a", "text": "Turkey"},
+                {"id": "b", "text": "Iran"},
+                {"id": "c", "text": "Iraq"},
+                {"id": "d", "text": "Afghanistan"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 45,
+              "question": "Which historical event took place on July 20, 1969?",
+              "options": [
+                {"id": "a", "text": "Moon landing"},
+                {"id": "b", "text": "Apollo 13 disaster"},
+                {"id": "c", "text": "Fall of the Berlin Wall"},
+                {"id": "d", "text": "Vietnam War ceasefire"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 46,
+              "question": "Who was the first woman to fly in space?",
+              "options": [
+                {"id": "a", "text": "Valentina Tereshkova"},
+                {"id": "b", "text": "Sally Ride"},
+                {"id": "c", "text": "Mae Jemison"},
+                {"id": "d", "text": "Yuri Gagarin"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 47,
+              "question": "Who was the famous French military leader who became emperor?",
+              "options": [
+                {"id": "a", "text": "Napoleon Bonaparte"},
+                {"id": "b", "text": "Louis XIV"},
+                {"id": "c", "text": "Charlemagne"},
+                {"id": "d", "text": "Vercingetorix"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 48,
+              "question": "What major event occurred in 1492?",
+              "options": [
+                {"id": "a", "text": "Christopher Columbus sailed to America"},
+                {"id": "b", "text": "The Spanish Armada was defeated"},
+                {"id": "c", "text": "The Battle of Hastings"},
+                {"id": "d", "text": "The Magna Carta was signed"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 49,
+              "question": "Which ancient empire was known for its 'Code of Laws'?",
+              "options": [
+                {"id": "a", "text": "Roman Empire"},
+                {"id": "b", "text": "Babylonian Empire"},
+                {"id": "c", "text": "Greek Empire"},
+                {"id": "d", "text": "Persian Empire"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 50,
+              "question": "In what year did the French Revolution begin?",
+              "options": [
+                {"id": "a", "text": "1788"},
+                {"id": "b", "text": "1789"},
+                {"id": "c", "text": "1790"},
+                {"id": "d", "text": "1791"}
+              ],
+              "correct_answer": "b"
+            }
+          ]
+      
+      },
+      {
+        "id":4,
+        "name": "animals",
+        "questions": [
+            {
+              "id": 1,
+              "question": "What is the largest land animal?",
+              "options": [
+                {"id": "a", "text": "Elephant"},
+                {"id": "b", "text": "Rhinoceros"},
+                {"id": "c", "text": "Giraffe"},
+                {"id": "d", "text": "Hippopotamus"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 2,
+              "question": "Which bird is known for its colorful feathers and ability to mimic sounds?",
+              "options": [
+                {"id": "a", "text": "Parrot"},
+                {"id": "b", "text": "Eagle"},
+                {"id": "c", "text": "Penguin"},
+                {"id": "d", "text": "Owl"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 3,
+              "question": "Which animal is known as the 'King of the Jungle'?",
+              "options": [
+                {"id": "a", "text": "Lion"},
+                {"id": "b", "text": "Tiger"},
+                {"id": "c", "text": "Elephant"},
+                {"id": "d", "text": "Cheetah"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 4,
+              "question": "What is the fastest land animal?",
+              "options": [
+                {"id": "a", "text": "Lion"},
+                {"id": "b", "text": "Cheetah"},
+                {"id": "c", "text": "Gazelle"},
+                {"id": "d", "text": "Horse"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 5,
+              "question": "Which animal is the largest mammal in the world?",
+              "options": [
+                {"id": "a", "text": "Blue Whale"},
+                {"id": "b", "text": "Elephant"},
+                {"id": "c", "text": "Giraffe"},
+                {"id": "d", "text": "Whale Shark"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 6,
+              "question": "Which animal has a long neck and is known for eating leaves from tall trees?",
+              "options": [
+                {"id": "a", "text": "Giraffe"},
+                {"id": "b", "text": "Elephant"},
+                {"id": "c", "text": "Zebra"},
+                {"id": "d", "text": "Kangaroo"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 7,
+              "question": "What is the largest species of shark?",
+              "options": [
+                {"id": "a", "text": "Great White Shark"},
+                {"id": "b", "text": "Hammerhead Shark"},
+                {"id": "c", "text": "Whale Shark"},
+                {"id": "d", "text": "Tiger Shark"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 8,
+              "question": "Which animal is known for its ability to change color to blend in with its surroundings?",
+              "options": [
+                {"id": "a", "text": "Chameleon"},
+                {"id": "b", "text": "Octopus"},
+                {"id": "c", "text": "Seahorse"},
+                {"id": "d", "text": "Snake"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 9,
+              "question": "What animal is known for its ability to fly and has nocturnal habits?",
+              "options": [
+                {"id": "a", "text": "Bat"},
+                {"id": "b", "text": "Owl"},
+                {"id": "c", "text": "Eagle"},
+                {"id": "d", "text": "Penguin"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 10,
+              "question": "Which animal is famous for its trunk?",
+              "options": [
+                {"id": "a", "text": "Elephant"},
+                {"id": "b", "text": "Giraffe"},
+                {"id": "c", "text": "Camel"},
+                {"id": "d", "text": "Kangaroo"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 11,
+              "question": "Which animal is the largest species of penguin?",
+              "options": [
+                {"id": "a", "text": "King Penguin"},
+                {"id": "b", "text": "Emperor Penguin"},
+                {"id": "c", "text": "Adélie Penguin"},
+                {"id": "d", "text": "Macaroni Penguin"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 12,
+              "question": "Which animal is known for being the only mammal capable of sustained flight?",
+              "options": [
+                {"id": "a", "text": "Bat"},
+                {"id": "b", "text": "Bird"},
+                {"id": "c", "text": "Flying Squirrel"},
+                {"id": "d", "text": "Flying Fish"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 13,
+              "question": "Which animal has the longest lifespan?",
+              "options": [
+                {"id": "a", "text": "Blue Whale"},
+                {"id": "b", "text": "Tortoise"},
+                {"id": "c", "text": "Elephant"},
+                {"id": "d", "text": "Koi Fish"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 14,
+              "question": "What animal is known for its ability to make a loud, booming sound to communicate?",
+              "options": [
+                {"id": "a", "text": "Elephant"},
+                {"id": "b", "text": "Lion"},
+                {"id": "c", "text": "Whale"},
+                {"id": "d", "text": "Crocodile"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 15,
+              "question": "Which animal is known for its slow movements and often hangs upside down in trees?",
+              "options": [
+                {"id": "a", "text": "Sloth"},
+                {"id": "b", "text": "Koala"},
+                {"id": "c", "text": "Panda"},
+                {"id": "d", "text": "Meerkat"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 16,
+              "question": "Which animal can sleep for up to 20 hours a day?",
+              "options": [
+                {"id": "a", "text": "Koala"},
+                {"id": "b", "text": "Lion"},
+                {"id": "c", "text": "Bear"},
+                {"id": "d", "text": "Bat"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 17,
+              "question": "Which animal is known for having eight legs?",
+              "options": [
+                {"id": "a", "text": "Octopus"},
+                {"id": "b", "text": "Spider"},
+                {"id": "c", "text": "Crab"},
+                {"id": "d", "text": "Squid"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 18,
+              "question": "Which animal is the largest species of cat?",
+              "options": [
+                {"id": "a", "text": "Lion"},
+                {"id": "b", "text": "Jaguar"},
+                {"id": "c", "text": "Tiger"},
+                {"id": "d", "text": "Leopard"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 19,
+              "question": "What type of animal is a Komodo dragon?",
+              "options": [
+                {"id": "a", "text": "Lizard"},
+                {"id": "b", "text": "Snake"},
+                {"id": "c", "text": "Crocodile"},
+                {"id": "d", "text": "Turtle"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 20,
+              "question": "Which animal is known for its large, bushy tail and is often found in forests?",
+              "options": [
+                {"id": "a", "text": "Fox"},
+                {"id": "b", "text": "Rabbit"},
+                {"id": "c", "text": "Squirrel"},
+                {"id": "d", "text": "Beaver"}
+              ],
+              "correct_answer": "c"
+            },
+            {
+              "id": 21,
+              "question": "Which animal has the longest migration?",
+              "options": [
+                {"id": "a", "text": "Whale"},
+                {"id": "b", "text": "Salmon"},
+                {"id": "c", "text": "Monarch Butterfly"},
+                {"id": "d", "text": "Caribou"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 22,
+              "question": "What animal is known for its black and white striped body?",
+              "options": [
+                {"id": "a", "text": "Zebra"},
+                {"id": "b", "text": "Tiger"},
+                {"id": "c", "text": "Panda"},
+                {"id": "d", "text": "Skunk"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 23,
+              "question": "Which animal is known for being the largest land predator?",
+              "options": [
+                {"id": "a", "text": "Polar Bear"},
+                {"id": "b", "text": "Lion"},
+                {"id": "c", "text": "Tiger"},
+                {"id": "d", "text": "Crocodile"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 24,
+              "question": "Which animal is capable of changing the color of its skin to blend in with its surroundings?",
+              "options": [
+                {"id": "a", "text": "Cuttlefish"},
+                {"id": "b", "text": "Chameleon"},
+                {"id": "c", "text": "Octopus"},
+                {"id": "d", "text": "Snake"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 25,
+              "question": "Which animal is known for its unique ability to use tools?",
+              "options": [
+                {"id": "a", "text": "Chimpanzee"},
+                {"id": "b", "text": "Elephant"},
+                {"id": "c", "text": "Crows"},
+                {"id": "d", "text": "Dolphin"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 26,
+              "question": "Which animal has the longest tongue in relation to its body size?",
+              "options": [
+                {"id": "a", "text": "Giraffe"},
+                {"id": "b", "text": "Anteater"},
+                {"id": "c", "text": "Kangaroo"},
+                {"id": "d", "text": "Chameleon"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 27,
+              "question": "What type of animal is the platypus?",
+              "options": [
+                {"id": "a", "text": "Mammal"},
+                {"id": "b", "text": "Bird"},
+                {"id": "c", "text": "Reptile"},
+                {"id": "d", "text": "Amphibian"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 28,
+              "question": "Which animal is known to have the most powerful bite force in the animal kingdom?",
+              "options": [
+                {"id": "a", "text": "Shark"},
+                {"id": "b", "text": "Crocodile"},
+                {"id": "c", "text": "Lion"},
+                {"id": "d", "text": "Tiger"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 29,
+              "question": "Which animal is famous for its ability to play dead when threatened?",
+              "options": [
+                {"id": "a", "text": "Opossum"},
+                {"id": "b", "text": "Snake"},
+                {"id": "c", "text": "Kangaroo"},
+                {"id": "d", "text": "Bear"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 30,
+              "question": "Which animal is known to live both on land and in water?",
+              "options": [
+                {"id": "a", "text": "Frog"},
+                {"id": "b", "text": "Salamander"},
+                {"id": "c", "text": "Turtle"},
+                {"id": "d", "text": "Alligator"}
+              ],
+              "correct_answer": "d"
+            },
+            {
+              "id": 31,
+              "question": "What animal can grow its limbs back if they are lost?",
+              "options": [
+                {"id": "a", "text": "Lizard"},
+                {"id": "b", "text": "Starfish"},
+                {"id": "c", "text": "Salamander"},
+                {"id": "d", "text": "All of the above"}
+              ],
+              "correct_answer": "d"
+            },
+            {
+              "id": 32,
+              "question": "Which animal is known to be able to see ultraviolet light?",
+              "options": [
+                {"id": "a", "text": "Bee"},
+                {"id": "b", "text": "Cat"},
+                {"id": "c", "text": "Bat"},
+                {"id": "d", "text": "Dog"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 33,
+              "question": "What animal is known to have the best sense of hearing?",
+              "options": [
+                {"id": "a", "text": "Bat"},
+                {"id": "b", "text": "Elephant"},
+                {"id": "c", "text": "Dog"},
+                {"id": "d", "text": "Human"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 34,
+              "question": "Which animal has the longest migration distance?",
+              "options": [
+                {"id": "a", "text": "Whale"},
+                {"id": "b", "text": "Caribou"},
+                {"id": "c", "text": "Birds"},
+                {"id": "d", "text": "Monarch Butterfly"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 35,
+              "question": "Which animal is known for its ability to jump up to 30 times its body length?",
+              "options": [
+                {"id": "a", "text": "Grasshopper"},
+                {"id": "b", "text": "Kangaroo"},
+                {"id": "c", "text": "Frog"},
+                {"id": "d", "text": "Rabbit"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 36,
+              "question": "Which animal is known for being able to swim at speeds of up to 60 mph?",
+              "options": [
+                {"id": "a", "text": "Cheetah"},
+                {"id": "b", "text": "Shark"},
+                {"id": "c", "text": "Dolphin"},
+                {"id": "d", "text": "Penguin"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 37,
+              "question": "Which animal has the smallest heart relative to its size?",
+              "options": [
+                {"id": "a", "text": "Hummingbird"},
+                {"id": "b", "text": "Mouse"},
+                {"id": "c", "text": "Bee"},
+                {"id": "d", "text": "Bat"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 38,
+              "question": "What animal has a diet consisting almost entirely of bamboo?",
+              "options": [
+                {"id": "a", "text": "Giant Panda"},
+                {"id": "b", "text": "Koala"},
+                {"id": "c", "text": "Sloth"},
+                {"id": "d", "text": "Elephant"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 39,
+              "question": "What animal is known for its ability to make complex sounds?",
+              "options": [
+                {"id": "a", "text": "Dolphin"},
+                {"id": "b", "text": "Whale"},
+                {"id": "c", "text": "Elephant"},
+                {"id": "d", "text": "Parrot"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 40,
+              "question": "Which animal is known for being able to produce venom?",
+              "options": [
+                {"id": "a", "text": "Snake"},
+                {"id": "b", "text": "Spider"},
+                {"id": "c", "text": "Scorpion"},
+                {"id": "d", "text": "All of the above"}
+              ],
+              "correct_answer": "d"
+            },
+            {
+              "id": 41,
+              "question": "What is the only species of bear found in South America?",
+              "options": [
+                {"id": "a", "text": "Andean Bear"},
+                {"id": "b", "text": "Grizzly Bear"},
+                {"id": "c", "text": "Polar Bear"},
+                {"id": "d", "text": "Black Bear"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 42,
+              "question": "Which animal is the largest species of primate?",
+              "options": [
+                {"id": "a", "text": "Gorilla"},
+                {"id": "b", "text": "Chimpanzee"},
+                {"id": "c", "text": "Orangutan"},
+                {"id": "d", "text": "Baboon"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 43,
+              "question": "Which animal is known for living in colonies led by a queen?",
+              "options": [
+                {"id": "a", "text": "Bee"},
+                {"id": "b", "text": "Ant"},
+                {"id": "c", "text": "Termite"},
+                {"id": "d", "text": "All of the above"}
+              ],
+              "correct_answer": "d"
+            },
+            {
+              "id": 44,
+              "question": "What animal is known for its powerful jumping abilities and strong hind legs?",
+              "options": [
+                {"id": "a", "text": "Kangaroo"},
+                {"id": "b", "text": "Frog"},
+                {"id": "c", "text": "Rabbit"},
+                {"id": "d", "text": "Deer"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 45,
+              "question": "Which animal is the largest rodent in the world?",
+              "options": [
+                {"id": "a", "text": "Capybara"},
+                {"id": "b", "text": "Beaver"},
+                {"id": "c", "text": "Guinea Pig"},
+                {"id": "d", "text": "Rat"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 46,
+              "question": "Which animal is known for its ability to fly long distances across the ocean?",
+              "options": [
+                {"id": "a", "text": "Albatross"},
+                {"id": "b", "text": "Seagull"},
+                {"id": "c", "text": "Penguin"},
+                {"id": "d", "text": "Eagle"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 47,
+              "question": "Which animal is capable of regenerating lost limbs?",
+              "options": [
+                {"id": "a", "text": "Lizard"},
+                {"id": "b", "text": "Starfish"},
+                {"id": "c", "text": "Frog"},
+                {"id": "d", "text": "All of the above"}
+              ],
+              "correct_answer": "d"
+            },
+            {
+              "id": 48,
+              "question": "What animal is known for its incredible speed underwater?",
+              "options": [
+                {"id": "a", "text": "Dolphin"},
+                {"id": "b", "text": "Shark"},
+                {"id": "c", "text": "Seal"},
+                {"id": "d", "text": "Penguin"}
+              ],
+              "correct_answer": "b"
+            },
+            {
+              "id": 49,
+              "question": "What is the largest species of whale?",
+              "options": [
+                {"id": "a", "text": "Blue Whale"},
+                {"id": "b", "text": "Humpback Whale"},
+                {"id": "c", "text": "Gray Whale"},
+                {"id": "d", "text": "Orca Whale"}
+              ],
+              "correct_answer": "a"
+            },
+            {
+              "id": 50,
+              "question": "Which animal is known for living in large social groups called pods?",
+              "options": [
+                {"id": "a", "text": "Orca Whale"},
+                {"id": "b", "text": "Dolphin"},
+                {"id": "c", "text": "Elephant"},
+                {"id": "d", "text": "Lion"}
+              ],
+              "correct_answer": "a"
+            }
+          ]
+      },
+      {
+        "id":5,
+        "name":"entertainment",
+        "questions":[
+          {
+            "id": 1,
+            "question": "Which color do you get when you mix red and yellow?",
+            "options": [
+              {"id": "a", "text": "Orange"},
+              {"id": "b", "text": "Purple"},
+              {"id": "c", "text": "Green"},
+              {"id": "d", "text": "Brown"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 2,
+            "question": "What is the capital of France?",
+            "options": [
+              {"id": "a", "text": "London"},
+              {"id": "b", "text": "Paris"},
+              {"id": "c", "text": "Berlin"},
+              {"id": "d", "text": "Rome"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 3,
+            "question": "Which fruit is known for having its seeds on the outside?",
+            "options": [
+              {"id": "a", "text": "Strawberry"},
+              {"id": "b", "text": "Banana"},
+              {"id": "c", "text": "Apple"},
+              {"id": "d", "text": "Peach"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 4,
+            "question": "Which holiday is known for giving gifts and decorating a tree?",
+            "options": [
+              {"id": "a", "text": "Halloween"},
+              {"id": "b", "text": "Christmas"},
+              {"id": "c", "text": "Thanksgiving"},
+              {"id": "d", "text": "New Year"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 5,
+            "question": "Which company is known for creating the iPhone?",
+            "options": [
+              {"id": "a", "text": "Google"},
+              {"id": "b", "text": "Apple"},
+              {"id": "c", "text": "Microsoft"},
+              {"id": "d", "text": "Samsung"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 6,
+            "question": "What is the largest planet in our solar system?",
+            "options": [
+              {"id": "a", "text": "Earth"},
+              {"id": "b", "text": "Mars"},
+              {"id": "c", "text": "Jupiter"},
+              {"id": "d", "text": "Saturn"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 7,
+            "question": "Which is the most popular social media platform?",
+            "options": [
+              {"id": "a", "text": "Twitter"},
+              {"id": "b", "text": "Instagram"},
+              {"id": "c", "text": "Facebook"},
+              {"id": "d", "text": "TikTok"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 8,
+            "question": "What is the name of the famous wizard in the Harry Potter series?",
+            "options": [
+              {"id": "a", "text": "Gandalf"},
+              {"id": "b", "text": "Harry Potter"},
+              {"id": "c", "text": "Frodo Baggins"},
+              {"id": "d", "text": "Hermione Granger"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 9,
+            "question": "Which animal is known for its black and white stripes?",
+            "options": [
+              {"id": "a", "text": "Zebra"},
+              {"id": "b", "text": "Tiger"},
+              {"id": "c", "text": "Giraffe"},
+              {"id": "d", "text": "Panda"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 10,
+            "question": "Which musical instrument has 88 keys?",
+            "options": [
+              {"id": "a", "text": "Guitar"},
+              {"id": "b", "text": "Piano"},
+              {"id": "c", "text": "Violin"},
+              {"id": "d", "text": "Trumpet"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 11,
+            "question": "Which popular animated movie features a fish named Nemo?",
+            "options": [
+              {"id": "a", "text": "The Lion King"},
+              {"id": "b", "text": "Frozen"},
+              {"id": "c", "text": "Finding Nemo"},
+              {"id": "d", "text": "Shrek"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 12,
+            "question": "What is the name of the toy cowboy in Toy Story?",
+            "options": [
+              {"id": "a", "text": "Woody"},
+              {"id": "b", "text": "Buzz Lightyear"},
+              {"id": "c", "text": "Mr. Potato Head"},
+              {"id": "d", "text": "Rex"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 13,
+            "question": "Which country is known as the Land of the Rising Sun?",
+            "options": [
+              {"id": "a", "text": "China"},
+              {"id": "b", "text": "South Korea"},
+              {"id": "c", "text": "Japan"},
+              {"id": "d", "text": "Thailand"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 14,
+            "question": "Which fruit is known for keeping doctors away when eaten daily?",
+            "options": [
+              {"id": "a", "text": "Banana"},
+              {"id": "b", "text": "Apple"},
+              {"id": "c", "text": "Orange"},
+              {"id": "d", "text": "Pineapple"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 15,
+            "question": "What is the name of the famous mouse character created by Disney?",
+            "options": [
+              {"id": "a", "text": "Mickey Mouse"},
+              {"id": "b", "text": "Jerry"},
+              {"id": "c", "text": "Stuart Little"},
+              {"id": "d", "text": "Remy"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 16,
+            "question": "Which ice cream flavor is known for its minty taste?",
+            "options": [
+              {"id": "a", "text": "Chocolate Chip"},
+              {"id": "b", "text": "Mint Chocolate Chip"},
+              {"id": "c", "text": "Vanilla"},
+              {"id": "d", "text": "Strawberry"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 17,
+            "question": "Which animal is known for its ability to change colors?",
+            "options": [
+              {"id": "a", "text": "Chameleon"},
+              {"id": "b", "text": "Cuttlefish"},
+              {"id": "c", "text": "Octopus"},
+              {"id": "d", "text": "All of the above"}
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 18,
+            "question": "Which superhero is known for his iconic shield?",
+            "options": [
+              {"id": "a", "text": "Iron Man"},
+              {"id": "b", "text": "Captain America"},
+              {"id": "c", "text": "Spider-Man"},
+              {"id": "d", "text": "Thor"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 19,
+            "question": "Which sport is known as 'America's pastime'?",
+            "options": [
+              {"id": "a", "text": "Football"},
+              {"id": "b", "text": "Basketball"},
+              {"id": "c", "text": "Baseball"},
+              {"id": "d", "text": "Hockey"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 20,
+            "question": "Which of the following is a famous video game character?",
+            "options": [
+              {"id": "a", "text": "Sonic the Hedgehog"},
+              {"id": "b", "text": "Pac-Man"},
+              {"id": "c", "text": "Mario"},
+              {"id": "d", "text": "All of the above"}
+            ],
+            "correct_answer": "d"
+          },
+          {
+            "id": 21,
+            "question": "Which bird is known for its bright red breast?",
+            "options": [
+              {"id": "a", "text": "Robin"},
+              {"id": "b", "text": "Cardinal"},
+              {"id": "c", "text": "Blue Jay"},
+              {"id": "d", "text": "Canary"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 22,
+            "question": "What is the name of the famous wizarding school in Harry Potter?",
+            "options": [
+              {"id": "a", "text": "Hogwarts"},
+              {"id": "b", "text": "Ravenclaw"},
+              {"id": "c", "text": "Beauxbatons"},
+              {"id": "d", "text": "Durmstrang"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 23,
+            "question": "What is the name of the fictional bear that loves honey?",
+            "options": [
+              {"id": "a", "text": "Baloo"},
+              {"id": "b", "text": "Winnie the Pooh"},
+              {"id": "c", "text": "Yogi Bear"},
+              {"id": "d", "text": "Paddington Bear"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 24,
+            "question": "Which animal is known for its ability to build dams?",
+            "options": [
+              {"id": "a", "text": "Beaver"},
+              {"id": "b", "text": "Otter"},
+              {"id": "c", "text": "Squirrel"},
+              {"id": "d", "text": "Rabbit"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 25,
+            "question": "Which country is the origin of pizza?",
+            "options": [
+              {"id": "a", "text": "France"},
+              {"id": "b", "text": "Italy"},
+              {"id": "c", "text": "Germany"},
+              {"id": "d", "text": "USA"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 26,
+            "question": "Which creature is known as the king of the jungle?",
+            "options": [
+              {"id": "a", "text": "Lion"},
+              {"id": "b", "text": "Elephant"},
+              {"id": "c", "text": "Tiger"},
+              {"id": "d", "text": "Bear"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 27,
+            "question": "Which superhero can shrink to the size of an ant?",
+            "options": [
+              {"id": "a", "text": "Iron Man"},
+              {"id": "b", "text": "Ant-Man"},
+              {"id": "c", "text": "Hulk"},
+              {"id": "d", "text": "Spider-Man"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 28,
+            "question": "What is the main ingredient in guacamole?",
+            "options": [
+              {"id": "a", "text": "Tomato"},
+              {"id": "b", "text": "Avocado"},
+              {"id": "c", "text": "Onion"},
+              {"id": "d", "text": "Lime"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 29,
+            "question": "Which company created the game Fortnite?",
+            "options": [
+              {"id": "a", "text": "Epic Games"},
+              {"id": "b", "text": "Activision"},
+              {"id": "c", "text": "EA Sports"},
+              {"id": "d", "text": "Blizzard"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 30,
+            "question": "What is the largest species of bird?",
+            "options": [
+              {"id": "a", "text": "Eagle"},
+              {"id": "b", "text": "Ostrich"},
+              {"id": "c", "text": "Penguin"},
+              {"id": "d", "text": "Albatross"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 31,
+            "question": "What is the famous symbol for recycling?",
+            "options": [
+              {"id": "a", "text": "A triangle with arrows"},
+              {"id": "b", "text": "A green leaf"},
+              {"id": "c", "text": "A blue circle"},
+              {"id": "d", "text": "A heart"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 32,
+            "question": "Which animal is known for its ability to fly?",
+            "options": [
+              {"id": "a", "text": "Eagle"},
+              {"id": "b", "text": "Bat"},
+              {"id": "c", "text": "Penguin"},
+              {"id": "d", "text": "Frog"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 33,
+            "question": "Which superhero is known for his ability to swing through the city using webs?",
+            "options": [
+              {"id": "a", "text": "Iron Man"},
+              {"id": "b", "text": "Spider-Man"},
+              {"id": "c", "text": "Thor"},
+              {"id": "d", "text": "Captain America"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 34,
+            "question": "What type of animal is Shrek's best friend Donkey?",
+            "options": [
+              {"id": "a", "text": "Horse"},
+              {"id": "b", "text": "Donkey"},
+              {"id": "c", "text": "Dragon"},
+              {"id": "d", "text": "Cat"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 35,
+            "question": "Which famous artist painted the Mona Lisa?",
+            "options": [
+              {"id": "a", "text": "Leonardo da Vinci"},
+              {"id": "b", "text": "Vincent van Gogh"},
+              {"id": "c", "text": "Pablo Picasso"},
+              {"id": "d", "text": "Claude Monet"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 36,
+            "question": "Which fruit is known for having a crown-like top?",
+            "options": [
+              {"id": "a", "text": "Apple"},
+              {"id": "b", "text": "Pineapple"},
+              {"id": "c", "text": "Banana"},
+              {"id": "d", "text": "Grapefruit"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 37,
+            "question": "What does a caterpillar turn into?",
+            "options": [
+              {"id": "a", "text": "Butterfly"},
+              {"id": "b", "text": "Moth"},
+              {"id": "c", "text": "Dragonfly"},
+              {"id": "d", "text": "Beetle"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 38,
+            "question": "Which of these is NOT a continent?",
+            "options": [
+              {"id": "a", "text": "Africa"},
+              {"id": "b", "text": "Australia"},
+              {"id": "c", "text": "Arctic"},
+              {"id": "d", "text": "Europe"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 39,
+            "question": "Which of these is a primary color?",
+            "options": [
+              {"id": "a", "text": "Purple"},
+              {"id": "b", "text": "Yellow"},
+              {"id": "c", "text": "Orange"},
+              {"id": "d", "text": "Pink"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 40,
+            "question": "What color is the character Homer Simpson's skin?",
+            "options": [
+              {"id": "a", "text": "Yellow"},
+              {"id": "b", "text": "Green"},
+              {"id": "c", "text": "Blue"},
+              {"id": "d", "text": "Orange"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 41,
+            "question": "What is the name of the pizza-loving Ninja Turtle?",
+            "options": [
+              {"id": "a", "text": "Leonardo"},
+              {"id": "b", "text": "Donatello"},
+              {"id": "c", "text": "Michelangelo"},
+              {"id": "d", "text": "Raphael"}
+            ],
+            "correct_answer": "c"
+          },
+          {
+            "id": 42,
+            "question": "Which character is famous for saying 'To infinity and beyond!'?",
+            "options": [
+              {"id": "a", "text": "Buzz Lightyear"},
+              {"id": "b", "text": "Woody"},
+              {"id": "c", "text": "Lightning McQueen"},
+              {"id": "d", "text": "Shrek"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 43,
+            "question": "Which country is famous for the Eiffel Tower?",
+            "options": [
+              {"id": "a", "text": "Italy"},
+              {"id": "b", "text": "France"},
+              {"id": "c", "text": "Germany"},
+              {"id": "d", "text": "England"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 44,
+            "question": "What is the capital of the United Kingdom?",
+            "options": [
+              {"id": "a", "text": "London"},
+              {"id": "b", "text": "Paris"},
+              {"id": "c", "text": "Berlin"},
+              {"id": "d", "text": "Rome"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 45,
+            "question": "Which of these is a type of tree?",
+            "options": [
+              {"id": "a", "text": "Cedar"},
+              {"id": "b", "text": "Cactus"},
+              {"id": "c", "text": "Bush"},
+              {"id": "d", "text": "Grass"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 46,
+            "question": "What type of animal is a 'Kangaroo'?",
+            "options": [
+              {"id": "a", "text": "Mammal"},
+              {"id": "b", "text": "Reptile"},
+              {"id": "c", "text": "Bird"},
+              {"id": "d", "text": "Fish"}
+            ],
+            "correct_answer": "a"
+          },
+          {
+            "id": 47,
+            "question": "What is the most common color of a school bus?",
+            "options": [
+              {"id": "a", "text": "Red"},
+              {"id": "b", "text": "Yellow"},
+              {"id": "c", "text": "Green"},
+              {"id": "d", "text": "Blue"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 48,
+            "question": "What is the name of the famous TV character who lives in a pineapple under the sea?",
+            "options": [
+              {"id": "a", "text": "Patrick"},
+              {"id": "b", "text": "SpongeBob SquarePants"},
+              {"id": "c", "text": "Squidward"},
+              {"id": "d", "text": "Mr. Krabs"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 49,
+            "question": "What shape is a basketball?",
+            "options": [
+              {"id": "a", "text": "Triangle"},
+              {"id": "b", "text": "Circle"},
+              {"id": "c", "text": "Square"},
+              {"id": "d", "text": "Rectangle"}
+            ],
+            "correct_answer": "b"
+          },
+          {
+            "id": 50,
+            "question": "What is the capital of Japan?",
+            "options": [
+              {"id": "a", "text": "Seoul"},
+              {"id": "b", "text": "Tokyo"},
+              {"id": "c", "text": "Beijing"},
+              {"id": "d", "text": "Bangkok"}
+            ],
+            "correct_answer": "b"
+          }
+        ]
       }  
+    ]    
+}
+  

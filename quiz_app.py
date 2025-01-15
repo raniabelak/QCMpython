@@ -7,27 +7,19 @@ import os
 import sys
 
 def get_base_path():
-    """
-    Dynamically resolves the base path for file operations.
-    - If running as an executable, returns the temporary directory created by PyInstaller.
-    - If running as a script, returns the directory of the script.
-    """
-    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
-        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+
+    if getattr(sys, 'frozen', False): 
+        return sys._MEIPASS 
     else:
-        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+        return os.path.dirname(os.path.abspath(__file__)) 
 
 def get_file_path(filename):
-    """
-    Resolves the full path for a file based on the base path.
-    """
+
     return os.path.join(get_base_path(), filename)
 
 def load_file(file_name):
-    """
-    Loads a JSON file and returns its data.
-    """
-    file_path = get_file_path(file_name)  # Resolve the file path
+
+    file_path = get_file_path(file_name)
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
@@ -38,10 +30,9 @@ def load_file(file_name):
         print(f"Error: The file '{file_name}' contains invalid JSON.")
         return {}
 
+# Save data to a JSON file
 def save_file(file_name, data):
-    """
-    Saves data to a JSON file.
-    """
+
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'w', encoding='utf-8') as file:
@@ -49,17 +40,13 @@ def save_file(file_name, data):
     except Exception as e:
         print(f"Error saving file '{file_name}': {e}")
 
+# Loads quiz categories from the qcm.json file
 def load_quiz():
-    """
-    Loads quiz categories from the qcm.json file.
-    """
     categories_data = load_file('qcm.json')
     return categories_data.get("categories", [])
 
+# Stores the quiz history for a user in history.json
 def store_quiz_history(user_id, category, user_answers, score):
-    """
-    Stores the user's quiz results in the history file.
-    """
     history_data = load_file('history.json') or []
     history_id = len(history_data) + 1
     quiz_entry = {
@@ -73,10 +60,8 @@ def store_quiz_history(user_id, category, user_answers, score):
     history_data.append(quiz_entry)
     save_file('history.json', history_data)
 
+# Runs the quiz for a given category
 def run_quiz(user_id, category):
-    """
-    Runs the quiz for a selected category.
-    """
     questions = category.get('questions', [])
     if not questions:
         print("No questions available in this category.")
@@ -154,9 +139,6 @@ def run_quiz(user_id, category):
     store_quiz_history(user_id, category['name'], user_answers, f"{score}/{num_questions}")
 
 def start_quiz(username):
-    """
-    Starts the quiz for the given username.
-    """
     user_id = uf.get_user_id(username, 'users.json')
     if not user_id:
         print("Invalid user.")

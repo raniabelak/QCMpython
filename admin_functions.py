@@ -2,28 +2,20 @@ import json
 import os
 import sys
 
+# Dynamically resolves the base path for file operations
 def get_base_path():
-    """
-    Dynamically resolves the base path for file operations.
-    - If running as an executable, returns the temporary directory created by PyInstaller.
-    - If running as a script, returns the directory of the script.
-    """
     if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
-        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+        return sys._MEIPASS  # use pyinstaller temp directory
     else:
-        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+        return os.path.dirname(os.path.abspath(__file__))  # use script directory
 
+# Resolves the full path for a file based on the base path
 def get_file_path(filename):
-    """
-    Resolves the full path for a file based on the base path.
-    """
     return os.path.join(get_base_path(), filename)
 
 def add_category_or_question(file_name):
-    """
-    Adds a new category or question to the quiz data.
-    """
-    file_path = get_file_path(file_name)  # Resolve the file path
+
+    file_path = get_file_path(file_name)
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -33,7 +25,6 @@ def add_category_or_question(file_name):
         print("Error: The file is corrupted or not in JSON format.")
         return
     
-    # Ask for the category name
     category_name = input("Enter the category name: ").strip()
     
     # Check if the category exists
@@ -61,7 +52,7 @@ def add_category_or_question(file_name):
     else:
         print(f"Adding to existing category '{category_name}'.")
     
-    # Ask if the user wants to add questions
+
     add_question = input("Do you want to add a question to this category? (yes/no): ").strip().lower()
     if add_question != "yes":
         print("Category added successfully!")
@@ -92,7 +83,6 @@ def add_category_or_question(file_name):
             "correct_answer": correct_answer
         })
         
-        # Ask if the user wants to add another question
         add_more = input("Do you want to add another question? (yes/no): ").strip().lower()
         if add_more != "yes":
             break
@@ -103,10 +93,8 @@ def add_category_or_question(file_name):
     
     print(f"Category '{category_name}' and its questions have been saved successfully!")
 
+
 def delete_category(file_name):
-    """
-    Deletes a category from the quiz data.
-    """
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -118,12 +106,10 @@ def delete_category(file_name):
         print("Error: The file is corrupted or not in JSON format.")
         return
 
-    # Show categories 
     print("Categories:")
     for category in data["categories"]:
         print(f"{category['id']}. {category['name']}")
 
-    # Ask for category ID to delete
     category_id = int(input("Enter the category ID to delete: "))
     category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
 
@@ -139,9 +125,7 @@ def delete_category(file_name):
         json.dump(data, file, indent=2, ensure_ascii=False)
     
 def delete_question(file_name):
-    """
-    Deletes a question from a category in the quiz data.
-    """
+
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -184,4 +168,4 @@ if __name__ == "__main__":
     file_name = "qcm.json"  # Replace with your JSON file name
     add_category_or_question(file_name)
     # delete_category(file_name)
-    # delete_question(file_name)
+    

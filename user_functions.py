@@ -3,27 +3,18 @@ import os
 import sys
 
 def get_base_path():
-    """
-    Dynamically resolves the base path for file operations.
-    - If running as an executable, returns the temporary directory created by PyInstaller.
-    - If running as a script, returns the directory of the script.
-    """
-    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
-        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+    if getattr(sys, 'frozen', False):
+        return sys._MEIPASS
     else:
-        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+        return os.path.dirname(os.path.abspath(__file__)) 
 
 def get_file_path(filename):
-    """
-    Resolves the full path for a file based on the base path.
-    """
+
     return os.path.join(get_base_path(), filename)
 
 def user_exists(user_name, file_name):
-    """
-    Checks if a user exists in the users file.
-    """
-    file_path = get_file_path(file_name)  # Resolve the file path
+
+    file_path = get_file_path(file_name)  
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -38,10 +29,8 @@ def user_exists(user_name, file_name):
     return user is not None
 
 def add_user(user_name, password, file_name):
-    """
-    Adds a new user to the users file.
-    """
-    file_path = get_file_path(file_name)  # Resolve the file path
+
+    file_path = get_file_path(file_name) 
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -65,9 +54,7 @@ def add_user(user_name, password, file_name):
     print("User added successfully.")
 
 def login(user_name, password, file_name):
-    """
-    Authenticates a user by checking their username and password.
-    """
+
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -86,9 +73,7 @@ def login(user_name, password, file_name):
         return False
 
 def get_user_id(username, file_name):
-    """
-    Retrieves the user ID for a given username.
-    """
+
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -108,9 +93,7 @@ def get_user_id(username, file_name):
         return None
 
 def check_history(user_id, file_name):
-    """
-    Displays the quiz history for a specific user.
-    """
+
     file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -160,23 +143,18 @@ if __name__ == "__main__":
     users_file = "users.json"  # Replace with your users file name
     history_file = "history.json"  # Replace with your history file name
 
-    # Example: Add a new user
     add_user("test_user", "password123", users_file)
 
-    # Example: Check if a user exists
     if user_exists("test_user", users_file):
         print("User exists!")
 
-    # Example: Login
     if login("test_user", "password123", users_file):
         print("Login successful!")
     else:
         print("Login failed.")
 
-    # Example: Get user ID
     user_id = get_user_id("test_user", users_file)
     if user_id:
         print(f"User ID: {user_id}")
 
-    # Example: Check user history
     check_history(user_id, history_file)

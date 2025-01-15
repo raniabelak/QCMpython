@@ -6,26 +6,15 @@ import os
 import sys
 
 def get_base_path():
-    """
-    Dynamically resolves the base path for file operations.
-    - If running as an executable, returns the temporary directory created by PyInstaller.
-    - If running as a script, returns the directory of the script.
-    """
-    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
-        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+    if getattr(sys, 'frozen', False):
+        return sys._MEIPASS
     else:
-        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+        return os.path.dirname(os.path.abspath(__file__))
 
 def get_file_path(filename):
-    """
-    Resolves the full path for a file based on the base path.
-    """
     return os.path.join(get_base_path(), filename)
 
 def admin_menu():
-    """
-    Admin menu for managing categories and questions.
-    """
     while True:
         print("\nAdmin Menu:")
         print("1. Add a new category or question")
@@ -46,9 +35,6 @@ def admin_menu():
             print("Invalid choice. Please try again.")
 
 def user_menu(user_name):
-    """
-    User menu for managing history or starting a new game.
-    """
     while True:
         print("\nUser Menu:")
         print("1. Check your history")
@@ -68,9 +54,6 @@ def user_menu(user_name):
             print("Invalid choice. Please try again.")
 
 def login_or_signup():
-    """
-    Handles the login or signup process.
-    """
     user_name = input("Enter your username: ").strip()
 
     if uf.user_exists(user_name, get_file_path('users.json')):
@@ -93,9 +76,6 @@ def login_or_signup():
         login_or_signup()  # Loop back to login after signup
 
 def main():
-    """
-    Main function to start the quiz game.
-    """
     print("WELCOME TO THE QUIZ GAME !!")
     is_admin = input("Are you an admin? (yes/no): ").strip().lower()
 

@@ -1,12 +1,37 @@
 import json
+import os
+import sys
 
-def add_category_or_question(file_path):
-    # Load the file or create it if it doesn't exist
+def get_base_path():
+    """
+    Dynamically resolves the base path for file operations.
+    - If running as an executable, returns the temporary directory created by PyInstaller.
+    - If running as a script, returns the directory of the script.
+    """
+    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
+        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+    else:
+        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+
+def get_file_path(filename):
+    """
+    Resolves the full path for a file based on the base path.
+    """
+    return os.path.join(get_base_path(), filename)
+
+def add_category_or_question(file_name):
+    """
+    Adds a new category or question to the quiz data.
+    """
+    file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
     except FileNotFoundError:
         data = {"categories": []}
+    except json.JSONDecodeError:
+        print("Error: The file is corrupted or not in JSON format.")
+        return
     
     # Ask for the category name
     category_name = input("Enter the category name: ").strip()
@@ -78,14 +103,19 @@ def add_category_or_question(file_path):
     
     print(f"Category '{category_name}' and its questions have been saved successfully!")
 
-# fonction pour supprimer une catégorie
-def delete_category(file_path):
-    # load the file
+def delete_category(file_name):
+    """
+    Deletes a category from the quiz data.
+    """
+    file_path = get_file_path(file_name)  # Resolve the file path
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
     except FileNotFoundError:
         print("File not found.")
+        return
+    except json.JSONDecodeError:
+        print("Error: The file is corrupted or not in JSON format.")
         return
 
     # Show categories 
@@ -108,13 +138,20 @@ def delete_category(file_path):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=2, ensure_ascii=False)
     
-# fonction pour supprimer une question
-def delete_question(file_path):
+def delete_question(file_name):
+    """
+    Deletes a question from a category in the quiz data.
+    """
+    file_path = get_file_path(file_name)  # Resolve the file path
     try:
-        with open ((file_path), 'r', encoding='UTF-8') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
     except FileNotFoundError:
-        exit("File not found.")
+        print("File not found.")
+        return
+    except json.JSONDecodeError:
+        print("Error: The file is corrupted or not in JSON format.")
+        return
 
     print("Categories:")
     for category in data["categories"]:
@@ -137,10 +174,14 @@ def delete_question(file_path):
         else:
             print("Question not found.")
 
-        with open(file_path, 'w', encoding='UTF-8') as file:
+        with open(file_path, 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
     else:
         print("Category not found.")
 
-# add_category_or_question('questions.json')
-# delete_category('questions.json')
+# Example usage
+if __name__ == "__main__":
+    file_name = "qcm.json"  # Replace with your JSON file name
+    add_category_or_question(file_name)
+    # delete_category(file_name)
+    # delete_question(file_name)

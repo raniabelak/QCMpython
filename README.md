@@ -22,7 +22,7 @@ Start by cloning the repository to your local machine using Git:
 git clone https://github.com/raniabelak/QCMpython.git .
 
 ###  Navigate into the project folder
- cd QCMpython
+cd QCMpython
 
 ###  Run it
 python main.py

@@ -2,9 +2,30 @@ import json
 import user_functions as uf
 import admin_functions as af
 import quiz_app as quiz
+import os
+import sys
+
+def get_base_path():
+    """
+    Dynamically resolves the base path for file operations.
+    - If running as an executable, returns the temporary directory created by PyInstaller.
+    - If running as a script, returns the directory of the script.
+    """
+    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
+        return sys._MEIPASS  # Use the temporary directory created by PyInstaller
+    else:
+        return os.path.dirname(os.path.abspath(__file__))  # Use the script's directory
+
+def get_file_path(filename):
+    """
+    Resolves the full path for a file based on the base path.
+    """
+    return os.path.join(get_base_path(), filename)
 
 def admin_menu():
-    """Admin menu for managing categories and questions."""
+    """
+    Admin menu for managing categories and questions.
+    """
     while True:
         print("\nAdmin Menu:")
         print("1. Add a new category or question")
@@ -14,18 +35,20 @@ def admin_menu():
         choice = input("Enter your choice: ").strip()
         
         if choice == "1":
-            af.add_category_or_question('questions.json')
+            af.add_category_or_question(get_file_path('qcm.json'))
         elif choice == "2":
-            af.delete_category('questions.json')
+            af.delete_category(get_file_path('qcm.json'))
         elif choice == "3":
-            af.delete_question('questions.json')
+            af.delete_question(get_file_path('qcm.json'))
         elif choice == "4":
             break
         else:
             print("Invalid choice. Please try again.")
 
 def user_menu(user_name):
-    """User menu for managing history or starting a new game."""
+    """
+    User menu for managing history or starting a new game.
+    """
     while True:
         print("\nUser Menu:")
         print("1. Check your history")
@@ -34,8 +57,8 @@ def user_menu(user_name):
         choice = input("Enter your choice: ").strip()
         
         if choice == "1":
-            user_id = uf.get_user_id(user_name)
-            uf.check_history(user_id, 'history.json')
+            user_id = uf.get_user_id(user_name, get_file_path('users.json'))
+            uf.check_history(user_id, get_file_path('history.json'))
         elif choice == "2":
             quiz.start_quiz(user_name)
         elif choice == "3":
@@ -45,14 +68,16 @@ def user_menu(user_name):
             print("Invalid choice. Please try again.")
 
 def login_or_signup():
-    """Handle login or signup process."""
+    """
+    Handles the login or signup process.
+    """
     user_name = input("Enter your username: ").strip()
 
-    if uf.user_exists(user_name, 'users.json'):
+    if uf.user_exists(user_name, get_file_path('users.json')):
         # User exists, ask for password
         for _ in range(3):  # Allow 3 attempts to enter the password
             password = input("Enter your password: ").strip()
-            if uf.login(user_name, password, 'users.json'):
+            if uf.login(user_name, password, get_file_path('users.json')):
                 print(f"Welcome {user_name}!! You have been logged in successfully.")
                 user_menu(user_name)  # Redirect to user menu
                 return
@@ -63,12 +88,14 @@ def login_or_signup():
         # User doesn't exist, sign up
         print(f"Welcome {user_name}! It seems you are new here. Let's sign you up.")
         password = input("Enter a password to create your account: ").strip()
-        uf.add_user(user_name, password, 'users.json')
+        uf.add_user(user_name, password, get_file_path('users.json'))
         print(f"Your account has been created successfully, {user_name}!")
         login_or_signup()  # Loop back to login after signup
 
-
 def main():
+    """
+    Main function to start the quiz game.
+    """
     print("WELCOME TO THE QUIZ GAME !!")
     is_admin = input("Are you an admin? (yes/no): ").strip().lower()
 
@@ -83,4 +110,4 @@ def main():
         login_or_signup()
 
 if __name__ == "__main__":
-    main()         
+    main()

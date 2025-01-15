@@ -45,6 +45,30 @@ On macOS/Linux: Run the executable from the terminal:
 ```bash
 ./main
 ```
+
+## Building the Executable (Optional)
+
+If you want to create an executable for the project, follow these steps:
+
+### Install PyInstaller:
+```bash
+pip install pyinstaller
+```
+### Build the executable:
+```bash
+pyinstaller --onefile --add-data "users.json;." --add-data "history.json;." --add-data "qcm.json;." main.py
+```
+Note: Replace ; with : if you're on macOS or Linux.
+
+The executable will be generated in [the dist folder](./dist/).
+
+## Application Features
+### Admin Mode:
+- Add, delete, or modify categories and questions.
+- Accessible by entering the admin code (**Admin2025**).
+### User Mode:
+- Take quizzes, view history, and track performance.
+- Register or log in to save progress.
 # Project rapport
 ## Table of Contents
 1. [Project Overview](#project-overview)

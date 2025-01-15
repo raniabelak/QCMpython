@@ -28,18 +28,18 @@ cd QCMpython
 You can run the application in two ways:
 
 1. **Running from Source Code** 
-Execute the main.py script directly using Python:
+Execute the [main.py](./main.py) script directly using Python:
 ```bash
 python main.py
 ```
 2. **Running the Executable**
-Navigate to the dist folder:
+Navigate to [the dist folder](./dist/):
 ```bash
 cd dist
 ```
 Execute the generated executable file:
 
-On Windows: Double-click the **main.exe** file.
+On Windows: Double-click the **[main.exe](./dist/main.exe)** file.
 
 On macOS/Linux: Run the executable from the terminal:
 ```bash

@@ -26,7 +26,7 @@ git clone https://github.com/raniabelak/QCMpython.git .
 
 ###  Run it
 python main.py
-
+```
 # Project rapport
 ## Table of Contents
 1. [Project Overview](#project-overview)

@@ -39,7 +39,8 @@ cd dist
 ```
 Execute the generated executable file:
 
-On Windows: Double-click the **main.exe** file
+On Windows: Double-click the **main.exe** file.
+
 On macOS/Linux: Run the executable from the terminal:
 ```bash
 ./main

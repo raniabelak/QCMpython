@@ -175,5 +175,64 @@
         ],
         "score": "4/10",
         "date": "2024-12-30 20:49:55.805167"
+    },
+    {
+        "id": 4,
+        "user_id": 6,
+        "category": "Football",
+        "questions": [
+            {
+                "question": "Which stadium is commonly known as \"The Theatre of Dreams\"?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What color cards can a referee show during a football match?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which team won the first-ever Premier League title?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which footballer was nicknamed \"The Divine Ponytail\"?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "Who is the youngest player to score in a FIFA World Cup?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the nickname of the Spanish national football team?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Who won the Golden Boot in the 2014 FIFA World Cup?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "What is the name of Arsenal’s home stadium?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which footballer is known as \"El Fenomeno\"?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which player scored the \"Hand of God\" goal?",
+                "user_answer": "b",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-15 10:38:33.508861"
     }
 ]

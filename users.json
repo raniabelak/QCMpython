@@ -24,6 +24,11 @@
       "id": 5,
       "username": "rania",
       "password": "4321"
+    },
+    {
+      "id": 6,
+      "username": "newlog",
+      "password": "1234"
     }
   ]
 }

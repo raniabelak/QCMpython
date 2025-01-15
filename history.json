@@ -175,5 +175,300 @@
         ],
         "score": "4/10",
         "date": "2024-12-30 20:49:55.805167"
+    },
+    {
+        "id": 4,
+        "user_id": 1,
+        "category": "Football",
+        "questions": [
+            {
+                "question": "Who won the FIFA World Cup in 2018?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which player has won the most Ballon d'Or awards?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the official nickname of Brazil's national football team?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2006?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which club has won the most UEFA Champions League titles?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Who holds the record for the most goals in a single FIFA World Cup tournament?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which player scored the \"Hand of God\" goal?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "In what year was the English Premier League founded?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the maximum duration of extra time in a football match?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which footballer is known as \"The King\"?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-12 02:03:57.452329"
+    },
+    {
+        "id": 5,
+        "user_id": 1,
+        "category": "Football",
+        "questions": [
+            {
+                "question": "Who won the FIFA World Cup in 2018?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which player has won the most Ballon d'Or awards?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the official nickname of Brazil's national football team?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2006?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which club has won the most UEFA Champions League titles?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Who holds the record for the most goals in a single FIFA World Cup tournament?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which player scored the \"Hand of God\" goal?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "In what year was the English Premier League founded?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the maximum duration of extra time in a football match?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which footballer is known as \"The King\"?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-12 02:03:59.797016"
+    },
+    {
+        "id": 6,
+        "user_id": 5,
+        "category": "history",
+        "questions": [
+            {
+                "question": "Who was the first President of the United States?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "In which year did World War I begin?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "Which civilization built the pyramids of Giza?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Who was the first emperor of China?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which event marked the start of the French Revolution?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Who was the British Prime Minister during World War II?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which empire was ruled by Julius Caesar?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country was the birthplace of the Renaissance?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Who discovered America in 1492?",
+                "user_answer": "d",
+                "is_correct": false
+            }
+        ],
+        "score": "6/10",
+        "date": "2025-01-12 02:12:20.456775"
+    },
+    {
+        "id": 7,
+        "user_id": 5,
+        "category": "Football",
+        "questions": [
+            {
+                "question": "Which team is known as \"Die Mannschaft\"?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which club is nicknamed \"The Bhoys\"?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which player scored the infamous \"Panenka\" penalty?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2006?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which country won the first-ever FIFA World Cup in 1930?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "What is the regulation size of a football pitch?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the official nickname of Brazil's national football team?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which country hosted the FIFA World Cup in 2010?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "Which player scored the \"Hand of God\" goal?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Who scored the fastest goal in FIFA World Cup history?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "7/10",
+        "date": "2025-01-12 13:37:43.166348"
+    },
+    {
+        "id": 8,
+        "user_id": 5,
+        "category": "entertainment",
+        "questions": [
+            {
+                "question": "What is the capital of Japan?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which fruit is known for having its seeds on the outside?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which sport is known as 'America's pastime'?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the name of the famous wizard in the Harry Potter series?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which country is known as the Land of the Rising Sun?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the largest planet in our solar system?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which famous artist painted the Mona Lisa?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the name of the famous TV character who lives in a pineapple under the sea?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which creature is known as the king of the jungle?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which musical instrument has 88 keys?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "3/10",
+        "date": "2025-01-15 14:21:08.038411"
     }
 ]

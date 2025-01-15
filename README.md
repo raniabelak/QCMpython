@@ -1,13 +1,33 @@
 # Multiple-Choice Questionnaire (MCQ) Application for Computer Science Students
 
 ### Realized by:
-- **BELAKEBI Rania** (222231633510)
-- **HESSAS Nassim** (222231395417)
-- **MAHMOUD Rayan** (22231395305)
-- **LAOUDI Farid** (222231327013)
+- **BELAKEBI Rania**
+- **HESSAS Nassim**
+- **MAHMOUD Rayan**
+- **LAOUDI Farid**
 
 ---
+## How to Run the Project
 
+Follow these steps to run the **Multiple-Choice Questionnaire (MCQ)** Application:
+
+### Prerequisites
+Before running the project, ensure that you have the following installed on your system:
+- **Python 3.x**: Make sure you have Python installed. You can download it from the official website: [Python Downloads](https://www.python.org/downloads/).
+- **Git**: If you don't have Git installed, you can download it here: [Git Downloads](https://git-scm.com/downloads).
+
+### Clone the Repository
+Start by cloning the repository to your local machine using Git:
+```bash
+git clone https://github.com/raniabelak/QCMpython.git .
+
+###  Navigate into the project folder
+ cd QCMpython
+
+###  Run it
+python main.py
+
+# Project rapport
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [System Architecture](#system-architecture)

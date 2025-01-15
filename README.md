@@ -23,9 +23,26 @@ git clone https://github.com/raniabelak/QCMpython.git .
 
 ###  Navigate into the project folder
 cd QCMpython
+```
+### Run the Application
+You can run the application in two ways:
 
-###  Run it
+1. **Running from Source Code** 
+Execute the main.py script directly using Python:
+```bash
 python main.py
+```
+2. **Running the Executable**
+Navigate to the dist folder:
+```bash
+cd dist
+```
+Execute the generated executable file:
+
+On Windows: Double-click the **main.exe** file
+On macOS/Linux: Run the executable from the terminal:
+```bash
+./main
 ```
 # Project rapport
 ## Table of Contents

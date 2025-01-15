@@ -1,9 +1,10 @@
 import json
 import random
 import datetime
+import time
 import user_functions as uf
 
-# Function to load a JSON file
+# Loading JSON files
 def load_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -20,12 +21,12 @@ def save_file(file_path, data):
     except Exception as e:
         print(f"Error saving file {file_path}: {e}")
 
-# Function to load quiz categories
+# Loading quiz categories
 def load_quiz():
     categories_data = load_file('qcm.json')
     return categories_data.get("categories", [])
 
-# Function to store the user's quiz results in the history file
+# Storing users quiz results in the history file
 def store_quiz_history(user_id, category, user_answers, score):
     history_data = load_file('history.json') or []
     history_id = len(history_data) + 1
@@ -40,7 +41,7 @@ def store_quiz_history(user_id, category, user_answers, score):
     history_data.append(quiz_entry)
     save_file('history.json', history_data)
 
-# Function to run the quiz
+# Running the quiz
 def run_quiz(user_id, category):
     questions = category.get('questions', [])
     if not questions:
@@ -51,7 +52,6 @@ def run_quiz(user_id, category):
     score = 0
     user_answers = []
 
-    # Ask how many questions the user wants to attempt
     try:
         num_questions = int(input("How many questions would you like to attempt? (10, 20, 30): "))
         if num_questions not in [10, 20, 30]:
@@ -61,15 +61,31 @@ def run_quiz(user_id, category):
         print("Please enter a valid number.")
         return
 
+    # Calculating total time for the quiz
+    total_time = num_questions * 20
+    print(f"You have {total_time} seconds to complete the quiz.")
+
+    # Start the timer
+    start_time = time.time()
+
     selected_questions = questions[:num_questions]
+    total_attempted = 0
     for i, question in enumerate(selected_questions, 1):
-        print(f"\nQuestion {i}: {question.get('question', 'No question available.')}")
+        elapsed_time = time.time() - start_time
+        remaining_time = total_time - elapsed_time
+
+        if remaining_time <= 0:
+            print("\nTime is up! The quiz has ended.")
+            break
+
+        print(f"\nTime remaining: {int(remaining_time)} seconds")
+        print(f"Question {i}: {question.get('question', 'No question available.')}")
 
         # Display available options
         for option in question.get('options', []):
             print(f"{option['id']}) {option['text']}")
 
-        # Get valid user input for the answer (a, b, c, or d)
+        # User input for answer
         while True:
             answer = input("Your answer (a/b/c/d): ").lower().strip()
             if answer in ['a', 'b', 'c', 'd']:
@@ -92,9 +108,15 @@ def run_quiz(user_id, category):
             correct_answer = next((opt['text'] for opt in question['options'] if opt['id'] == question['correct_answer']), "Unknown")
             print(f"Wrong! The correct answer was: {correct_answer}")
 
-        print(f"Current score: {score}/{i}")
+        total_attempted += 1
+        print(f"Current score: {score}/{total_attempted}")
 
-    print(f"\nQuiz finished! Your final score is {score}/{num_questions}")
+    elapsed_time = time.time() - start_time
+    if elapsed_time < total_time:
+        print(f"\nQuiz finished! Your final score is {score}/{num_questions}")
+    else:
+        print(f"\nTime is up! Your final score is {score}/{num_questions}")
+
     store_quiz_history(user_id, category['name'], user_answers, f"{score}/{num_questions}")
 
 # Main function to start the quiz

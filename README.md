@@ -88,7 +88,7 @@ This project provides a fun and interactive way to take quizzes and manage quiz 
    - Enter the admin code (default: `admin2025`) in the admin login tab.
 
 2. **Manage Quizzes:**
-   - Use the admin menu to add or delete categories and questions. (for safety reasons, the qcm/quiz questions are modified in questions.json instead of qcm.json, to verify the data manipulation and ensure that the user doesn't delete from our main collected quiz questions in qcm.json)
+   - Use the admin menu to add or delete categories and questions. (the qcm/quiz questions are modified in questions.json instead of qcm.json, to verify the data manipulation and ensure that the user doesn't delete from our main collected quiz questions in qcm.json)
    - Ensure questions have clear options and a correct answer specified.
 
 3. **Logout:**

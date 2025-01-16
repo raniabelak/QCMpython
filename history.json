@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "user_id": 5,
+        "category": "javascript",
+        "questions": [
+            {
+                "question": "What is the purpose of the `bind()` method in JavaScript?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is NOT a valid way to create an object in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of `typeof` in JavaScript?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the result of `typeof []` in JavaScript?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of `console.log(2 + '2' - 1)` in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following are valid ways to define a function in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output? `console.log([] == [])`",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is a closure in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `console.log('5' - 1)` in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `splice()` method do in JavaScript?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "3/10",
+        "date": "2025-01-16 23:53:20.432266"
+    }
+]

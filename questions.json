@@ -1,0 +1,43 @@
+{
+  "categories": [
+    {
+      "id": 2,
+      "name": "phy",
+      "questions": []
+    },
+    {
+      "id": 4,
+      "name": "cat",
+      "questions": []
+    },
+    {
+      "id": 5,
+      "name": "foot",
+      "questions": [
+        {
+          "id": 1,
+          "question": "qst",
+          "options": [
+            {
+              "id": "a",
+              "text": "qw"
+            },
+            {
+              "id": "b",
+              "text": "w"
+            },
+            {
+              "id": "c",
+              "text": "e"
+            },
+            {
+              "id": "d",
+              "text": "r"
+            }
+          ],
+          "correct_answer": "c"
+        }
+      ]
+    }
+  ]
+}

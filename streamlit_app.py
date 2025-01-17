@@ -27,6 +27,18 @@ def display_quiz(category, user_id):
     if not category or not category.get('questions'):
         st.warning("No questions available in this category.")
         return
+    
+    # Add custom CSS for uniform button width
+    st.markdown("""
+        <style>
+        .stButton > button {
+            width: 100%;
+            white-space: normal;
+            height: auto;
+            min-height: 45px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
     if not st.session_state.quiz_started:
         st.subheader("Quiz Settings")
@@ -48,7 +60,8 @@ def display_quiz(category, user_id):
             st.session_state.user_answers = []
             st.session_state.quiz_started = True
             st.session_state.start_time = datetime.datetime.now()
-            st.session_state.total_time = num_questions * 20  # Setting 20 seconds per question as in quiz_app.py
+            st.session_state.total_time = num_questions * 20
+            st.session_state.answer_submitted = False
             st.rerun()
     
     elif st.session_state.quiz_started:
@@ -82,28 +95,45 @@ def display_quiz(category, user_id):
             st.write("---")
             st.write(question['question'])
             
-            options = {opt['id']: opt['text'] for opt in question['options']}
-            answer = st.radio(
-                "Choose your answer:",
-                options.keys(),
-                format_func=lambda x: f"{x}) {options[x]}"
-            )
+            # Create columns for the options
+            col1, col2 = st.columns(2)
             
-            col1, col2 = st.columns([1, 5])
+            # If answer hasn't been submitted yet, show clickable buttons
+            if not st.session_state.get('answer_submitted', False):
+                for idx, opt in enumerate(question['options']):
+                    # Display options in two columns
+                    with col1 if idx < 2 else col2:
+                        if st.button(f"{opt['id']}) {opt['text']}", key=f"opt_{opt['id']}"):
+                            st.session_state.selected_answer = opt['id']
+                            st.session_state.answer_submitted = True
+                            st.rerun()
             
-            with col1:
+            # After answer is submitted, show colored feedback
+            else:
+                for idx, opt in enumerate(question['options']):
+                    # Display options in two columns with appropriate colors
+                    with col1 if idx < 2 else col2:
+                        if opt['id'] == question['correct_answer']:
+                            st.success(f"{opt['id']}) {opt['text']}")
+                        elif opt['id'] == st.session_state.selected_answer:
+                            st.error(f"{opt['id']}) {opt['text']}")
+                        else:
+                            st.write(f"{opt['id']}) {opt['text']}")
+                
+                # Show next question button after displaying feedback
                 if st.button("Next Question"):
-                    is_correct = (answer == question['correct_answer'])
+                    is_correct = (st.session_state.selected_answer == question['correct_answer'])
                     if is_correct:
                         st.session_state.score += 1
                     
                     st.session_state.user_answers.append({
                         "question": question['question'],
-                        "user_answer": answer,
+                        "user_answer": st.session_state.selected_answer,
                         "is_correct": is_correct
                     })
                     
                     st.session_state.current_question += 1
+                    st.session_state.answer_submitted = False
                     st.rerun()
         
         else:
@@ -112,7 +142,6 @@ def display_quiz(category, user_id):
             
             st.success(f"Quiz completed! Your score: {final_score}/{total_questions}")
             
-            # Using qa.store_quiz_history directly
             qa.store_quiz_history(
                 user_id,
                 category['name'],
@@ -120,20 +149,6 @@ def display_quiz(category, user_id):
                 f"{final_score}/{total_questions}",
                 'history.json'
             )
-            
-            st.subheader("Review Your Answers")
-            for i, (q, a) in enumerate(zip(questions, st.session_state.user_answers)):
-                correct_ans = next(opt['text'] for opt in q['options'] if opt['id'] == q['correct_answer'])
-                user_ans = next(opt['text'] for opt in q['options'] if opt['id'] == a['user_answer'])
-                
-                st.write(f"**Question {i+1}:** {q['question']}")
-                st.write(f"Your answer: {user_ans}")
-                st.write(f"Correct answer: {correct_ans}")
-                if a['is_correct']:
-                    st.success("Correct! ✅")
-                else:
-                    st.error("Incorrect ❌")
-                st.write("---")
             
             if st.button("Take Another Quiz"):
                 st.session_state.quiz_started = False

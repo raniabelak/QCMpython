@@ -461,5 +461,241 @@
         ],
         "score": "6/10",
         "date": "2025-01-17 15:37:07.197361"
+    },
+    {
+        "id": 8,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to remove leading whitespace from a string?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following will return the type of a variable?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 * 'ab')`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions is used to convert a string to an integer in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct way to declare a function in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `print([1, 2, 3] + [4, 5, 6])`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `__init__` method in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-17 15:57:04.990139"
+    },
+    {
+        "id": 9,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to remove leading whitespace from a string?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following will return the type of a variable?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 * 'ab')`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions is used to convert a string to an integer in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct way to declare a function in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `print([1, 2, 3] + [4, 5, 6])`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `__init__` method in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-17 15:57:07.706593"
+    },
+    {
+        "id": 10,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What will be the output of the following code: `print(2 ** 3 ** 2)`?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which Python data type is used to store a collection of unique items?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct syntax to create a class in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to join elements of a list into a string?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct syntax to create an empty set?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to convert a string into a list of words in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "1/10",
+        "date": "2025-01-17 15:58:52.972327"
+    },
+    {
+        "id": 11,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What will be the output of the following code: `print(2 ** 3 ** 2)`?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which Python data type is used to store a collection of unique items?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct syntax to create a class in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to join elements of a list into a string?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct syntax to create an empty set?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to convert a string into a list of words in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "1/10",
+        "date": "2025-01-17 15:58:55.849303"
     }
 ]

@@ -76,8 +76,8 @@ This project provides a fun and interactive way to take quizzes and manage quiz 
    - Choose a category and configure your quiz settings.
    - Answer the questions within the time limit, initially you will get 10 seconds per questions.
 
-3. **Review Results:**
-   - After completing the quiz, view your score and review the correct and incorrect answers.
+3. **Results & Feedbacks:**
+   - After completing each question of quiz, view your score and review the correct and incorrect answers by checking the styling colors (red if answer incorrect, green if answer correct).
 
 4. **View History:**
    - Use the "View History" option to see your past quiz attempts.

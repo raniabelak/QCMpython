@@ -44,6 +44,11 @@
       "id": 9,
       "username": "test",
       "password": "1234"
+    },
+    {
+      "id": 10,
+      "username": "final boss",
+      "password": "1234"
     }
   ]
 }

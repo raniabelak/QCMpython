@@ -3,40 +3,16 @@
         {
             "id": 1,
             "name": "phy",
-            "questions": [
-                {
-                    "id": 1,
-                    "question": "this is a test?",
-                    "options": [
-                        {
-                            "id": "a",
-                            "text": "yes "
-                        },
-                        {
-                            "id": "b",
-                            "text": "now"
-                        },
-                        {
-                            "id": "c",
-                            "text": "maybe"
-                        },
-                        {
-                            "id": "d",
-                            "text": "maybe not"
-                        }
-                    ],
-                    "correct_answer": "a"
-                }
-            ]
+            "questions": []
         },
         {
             "id": 2,
-            "name": "cat",
+            "name": "nassim",
             "questions": []
         },
         {
             "id": 3,
-            "name": "foot",
+            "name": "farid",
             "questions": []
         }
     ]

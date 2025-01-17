@@ -697,5 +697,510 @@
         ],
         "score": "1/10",
         "date": "2025-01-17 15:58:55.849303"
+    },
+    {
+        "id": 12,
+        "user_id": 7,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the result of the following operation: `x = 5; y = 2; print(x % y)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the result of `print(10 // 3)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is a valid tuple in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is used to implement a queue in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `del` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following can be used as a key in a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following statements will cause a syntax error?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `print([1, 2, 3] + [4, 5, 6])`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the purpose of the `super()` function in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "4/10",
+        "date": "2025-01-17 16:16:17.513794"
+    },
+    {
+        "id": 13,
+        "user_id": 10,
+        "category": "php",
+        "questions": [
+            {
+                "question": "How do you access an element in a PHP array?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the result of `strlen('Hello')` in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will NOT remove an element from an array in PHP?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions checks if a file is writable?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does `$_GET` represent in PHP?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the result of the following PHP code? `echo 3 + 2 * 4`",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following PHP code output? `echo isset($var);` when `$var` is not defined?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will create a new object in PHP?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions returns the number of elements in an array in PHP?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following statements is used to exit from a loop in PHP?",
+                "user_answer": "d",
+                "is_correct": false
+            }
+        ],
+        "score": "4/10",
+        "date": "2025-01-17 16:17:52.428763"
+    },
+    {
+        "id": 14,
+        "user_id": 10,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to remove leading whitespace from a string?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `del` statement do in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following statements is used to import a specific function from a module?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the result of `print(10 // 3)`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `super()` function in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is a valid tuple in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the output of `print([1, 2, 3] * 2)`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods can be used to read a file in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the output of the following code: `print(2 ** 3 ** 2)`?",
+                "user_answer": "c",
+                "is_correct": true
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-17 16:55:07.442390"
+    },
+    {
+        "id": 15,
+        "user_id": 5,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following operators is used for exponentiation in Python?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which Python data type is used to store a collection of unique items?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is used to implement a queue in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to add an item to the end of a list in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions is used to convert a string to an integer in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following can be used as a key in a Python dictionary?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "How can you check the type of an object in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "What is the correct syntax to create a class in Python?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-17 16:58:57.633923"
+    },
+    {
+        "id": 16,
+        "user_id": 5,
+        "category": "C/C++",
+        "questions": [
+            {
+                "question": "Which of the following is not a valid C/C++ preprocessor directive?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is a feature of object-oriented programming in C++?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which function is used to copy a string in C?",
+                "user_answer": "d",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is true about the 'malloc' function in C?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "In C++, which of the following is used to overload the 'new' operator?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is not a valid data type in C?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following C functions is used to compare two strings lexicographically?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the return type of the 'main' function in C++?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is used to dynamically allocate memory for a single object in C++?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is the correct syntax to declare a pointer in C?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "4/10",
+        "date": "2025-01-17 17:12:06.290404"
+    },
+    {
+        "id": 17,
+        "user_id": 10,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which method is used to add an item to the end of a list in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 == 2)`?",
+                "user_answer": "b",
+                "is_correct": true
+            },
+            {
+                "question": "Which function can be used to check if a number is an integer?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which data type can be used as a key in a Python dictionary?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions will allow you to sort a Python list in ascending order?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `print('Hello, World!'[::-1])`?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "What is the purpose of the `super()` function in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "5/10",
+        "date": "2025-01-17 17:24:49.760058"
+    },
+    {
+        "id": 18,
+        "user_id": 10,
+        "category": "php",
+        "questions": [
+            {
+                "question": "How do you get the current user agent string in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will check if a PHP variable is an integer?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is NOT a correct way to loop through an array in PHP?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of the following PHP code: `echo 5 + '3 apples';`?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `session_destroy()` function in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following PHP functions is used to open a file for reading?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is used to declare a constant in PHP?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions returns the number of elements in an array in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will create a new object in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will create a new instance of a class in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "7/10",
+        "date": "2025-01-17 17:25:19.155936"
+    },
+    {
+        "id": 19,
+        "user_id": 10,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the output of `print(3 * 'ab')`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to round a number to the nearest integer?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "2/10",
+        "date": "2025-01-17 17:39:43.616970"
+    },
+    {
+        "id": 20,
+        "user_id": 10,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the correct way to declare a function in Python?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(list(range(5)))`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the output of the following code: `print(2 ** 3 ** 2)`?",
+                "user_answer": "c",
+                "is_correct": true
+            },
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to convert a string into a list of words in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "How can you check the type of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following methods can be used to read a file in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "6/10",
+        "date": "2025-01-17 18:01:34.072468"
+    },
+    {
+        "id": 21,
+        "user_id": 10,
+        "category": "php",
+        "questions": [
+            {
+                "question": "Which of the following functions is used to get the current timestamp in PHP?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "1/10",
+        "date": "2025-01-17 18:02:47.611284"
     }
 ]

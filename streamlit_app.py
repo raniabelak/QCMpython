@@ -1,34 +1,34 @@
 import streamlit as st
-import json
 import datetime
 import quiz_app as qa
 import user_functions as uf
-# import admin_functions as af "There is no need of it bcs admin_functions are used to handle admin functions in terminal by input() and all"
 
 def init_session_state():
     if 'logged_in' not in st.session_state:
-        st.session_state.logged_in = False
+        st.session_state.logged_in = False   # Tracks user login status and tmedelha true if logged in
     if 'username' not in st.session_state:
-        st.session_state.username = None
+        st.session_state.username = None     # Stores current username tae user
     if 'is_admin' not in st.session_state:
-        st.session_state.is_admin = False
+        st.session_state.is_admin = False    # Tracks if admin login
     if 'current_question' not in st.session_state:
-        st.session_state.current_question = 0
+        st.session_state.current_question = 0   # Tracks current question index, there are many usage of it obv
     if 'score' not in st.session_state:
-        st.session_state.score = 0
+        st.session_state.score = 0      # Stores current qcm score of player
     if 'user_answers' not in st.session_state:
-        st.session_state.user_answers = []
+        st.session_state.user_answers = []      # Stores user answers for history
     if 'quiz_started' not in st.session_state:
-        st.session_state.quiz_started = False
+        st.session_state.quiz_started = False       # Tracks if quiz is in progress
     if 'selected_category' not in st.session_state:
-        st.session_state.selected_category = None
+        st.session_state.selected_category = None       # Stores selected qcm category
 
 def display_quiz(category, user_id):
+
+     # check and valid if category has questions
     if not category or not category.get('questions'):
         st.warning("No questions available in this category.")
         return
     
-    # Add custom CSS for uniform button width
+    # Add custom CSS for uniform button width, and answer status colors
     st.markdown("""
         <style>
         .stButton > button {
@@ -37,9 +37,39 @@ def display_quiz(category, user_id):
             height: auto;
             min-height: 45px;
         }
+        .correct-answer {
+            text-align: center;
+            background-color: #90EE90 !important;  
+            color: #006400 !important;  
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+        .wrong-answer {
+            text-align: center;
+            background-color: #FFB6C1 !important; 
+            color: #8B0000 !important;  
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+
+        }
+        .normal-answer {
+            text-align: center;    
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
         </style>
     """, unsafe_allow_html=True)
 
+    # qcm initialization interface
     if not st.session_state.quiz_started:
         st.subheader("Quiz Settings")
         num_questions = st.selectbox(
@@ -48,84 +78,125 @@ def display_quiz(category, user_id):
         )
         
         if st.button("Start Quiz"):
+            # Initialize qcm with random questions from category
             questions = category.get('questions', [])
             import random
             selected_questions = random.sample(
                 questions, 
                 min(num_questions, len(questions))
             )
+            # Setting states for qcm
             st.session_state.questions = selected_questions
             st.session_state.current_question = 0
             st.session_state.score = 0
             st.session_state.user_answers = []
             st.session_state.quiz_started = True
             st.session_state.start_time = datetime.datetime.now()
-            st.session_state.total_time = num_questions * 20
+            st.session_state.total_time = num_questions * 1 # 10 seconds per question, change here if you want to test the time
             st.session_state.answer_submitted = False
+            st.session_state.quiz_completed = False  # status added to prevent multiple history entries, we'll try and see hopefully it works (it worked yay)
             st.rerun()
     
+    # qcm running interface
     elif st.session_state.quiz_started:
         st.empty()
         
         questions = st.session_state.questions
         current_q = st.session_state.current_question
         
+        # Calculate remaining time by seconds
         elapsed_time = (datetime.datetime.now() - st.session_state.start_time).total_seconds()
         remaining_time = max(0, st.session_state.total_time - elapsed_time)
         
+        # Display qcm header with question number, score, and time
         col1, col2, col3 = st.columns([2, 1, 1])
         with col1:
-            st.subheader(f"Question {current_q + 1}")
+            if current_q < len(questions):
+                st.subheader(f"Question {current_q + 1}")
+            else:
+                st.subheader(f"Question {len(questions)}")  # Ensure it remains at the total number of questions after displaying the last question
         with col2:
             st.subheader(f"Score: {st.session_state.score}")
         with col3:
             st.subheader(f"Time: {int(remaining_time)}s")
         
+        # Display progress bar (pretty innit)
         progress = st.progress((current_q) / len(questions))
         
+        # Handle qcm timeout
         if remaining_time <= 0:
             st.error("Time's up! Quiz ended.")
-            st.session_state.current_question = len(questions)
-            st.rerun()
+            
+            # Store qcm history in cas user didn't make it in time 
+            if not st.session_state.get('quiz_completed', False):
+                final_score = st.session_state.score
+                total_questions = len(questions)
+                
+                qa.store_quiz_history(
+                    user_id,
+                    category['name'],
+                    st.session_state.user_answers,
+                    f"{final_score}/{total_questions}",
+                    'history.json'
+                )
+                st.session_state.quiz_completed = True
+            
+            # Show final score and a cta to ask if user wants to take another try
+            st.success(f"Quiz completed! Your score: {st.session_state.score}/{len(questions)}")
+            
+            if st.button("Take Another Quiz"):
+                # Reset qcm states
+                st.session_state.quiz_started = False
+                st.session_state.current_question = 0
+                st.session_state.score = 0
+                st.session_state.user_answers = []
+                st.session_state.selected_category = None
+                st.session_state.quiz_completed = False
+                st.rerun()
             return
         
+        # Display current question and options
         if current_q < len(questions):
             question = questions[current_q]
             
             st.write("---")
             st.write(question['question'])
             
-            # Create columns for the options
             col1, col2 = st.columns(2)
             
-            # If answer hasn't been submitted yet, show clickable buttons
+            # Show options if answer not submitted
             if not st.session_state.get('answer_submitted', False):
                 for idx, opt in enumerate(question['options']):
-                    # Display options in two columns
                     with col1 if idx < 2 else col2:
                         if st.button(f"{opt['id']}) {opt['text']}", key=f"opt_{opt['id']}"):
                             st.session_state.selected_answer = opt['id']
                             st.session_state.answer_submitted = True
                             st.rerun()
             
-            # After answer is submitted, show colored feedback
+            # Show the correct and wrong answers by colors
             else:
                 for idx, opt in enumerate(question['options']):
-                    # Display options in two columns with appropriate colors
                     with col1 if idx < 2 else col2:
                         if opt['id'] == question['correct_answer']:
-                            st.success(f"{opt['id']}) {opt['text']}")
+                            css_class = "correct-answer"
                         elif opt['id'] == st.session_state.selected_answer:
-                            st.error(f"{opt['id']}) {opt['text']}")
+                            css_class = "wrong-answer" if opt['id'] != question['correct_answer'] else "correct-answer"
                         else:
-                            st.write(f"{opt['id']}) {opt['text']}")
+                            css_class = "normal-answer"
+
+                        # Display the option with appropriate styling colors
+                        st.markdown(
+                            f'<div class="{css_class}">{opt["id"]}) {opt["text"]}</div>',
+                            unsafe_allow_html=True
+                        )
                 
-                # Show next question button after displaying feedback
+                # Handle next question 
                 if st.button("Next Question"):
                     is_correct = (st.session_state.selected_answer == question['correct_answer'])
                     if is_correct:
                         st.session_state.score += 1
                     
+                    # Store answer for history
                     st.session_state.user_answers.append({
                         "question": question['question'],
                         "user_answer": st.session_state.selected_answer,
@@ -136,26 +207,32 @@ def display_quiz(category, user_id):
                     st.session_state.answer_submitted = False
                     st.rerun()
         
+        # Qcm completed
         else:
-            final_score = st.session_state.score
-            total_questions = len(questions)
+            # Only store qcm history if it hasn't been stored yet
+            if not st.session_state.get('quiz_completed', False):
+                final_score = st.session_state.score
+                total_questions = len(questions)
+                
+                qa.store_quiz_history(
+                    user_id,
+                    category['name'],
+                    st.session_state.user_answers,
+                    f"{final_score}/{total_questions}",
+                    'history.json'
+                )
+                st.session_state.quiz_completed = True  # Mark quiz as completed
             
-            st.success(f"Quiz completed! Your score: {final_score}/{total_questions}")
+            st.success(f"Quiz completed! Your score: {st.session_state.score}/{len(questions)}")
             
-            qa.store_quiz_history(
-                user_id,
-                category['name'],
-                st.session_state.user_answers,
-                f"{final_score}/{total_questions}",
-                'history.json'
-            )
-            
+            # Option to start new qcm
             if st.button("Take Another Quiz"):
                 st.session_state.quiz_started = False
                 st.session_state.current_question = 0
                 st.session_state.score = 0
                 st.session_state.user_answers = []
                 st.session_state.selected_category = None
+                st.session_state.quiz_completed = False  # Reset completion status
                 st.rerun()
 
 def view_history(user_id):
@@ -164,11 +241,13 @@ def view_history(user_id):
         if not history_data:
             st.warning("No history available.")
             return
-            
+
+        # Filter history for current user    
         user_history = [game for game in history_data if game['user_id'] == user_id]
 
         if user_history:
             st.subheader("Your Quiz History")
+            # Display each qcm attempt with questions and answers
             for index, game in enumerate(user_history, start=1):
                 with st.expander(f"Game {index}: {game['category']} - Score: {game['score']} - Date: {game['date']}"):
                     st.write("Questions and Answers:")
@@ -193,6 +272,7 @@ def admin_menu():
         ["Add Category", "Add Question", "Delete Category", "Delete Question", "Logout"]
     )
     
+    # Adding new category
     if menu_choice == "Add Category":
         st.subheader("Add New Category")
         category_name = st.text_input("Enter category name:")
@@ -213,6 +293,7 @@ def admin_menu():
                 qa.save_json_file('questions.json', data)
                 st.success(f"Category '{category_name}' added successfully!")
 
+    # Adding new question
     elif menu_choice == "Add Question":
         st.subheader("Add Question")
         
@@ -243,7 +324,7 @@ def admin_menu():
                 if not all([question_text, option_a, option_b, option_c, option_d]):
                     st.error("Please fill in all fields!")
                 else:
-                    # Find selected category
+                    # Find selected category and add question
                     category = next(cat for cat in categories if cat["name"] == selected_category)
                     
                     # Create new question
@@ -265,6 +346,7 @@ def admin_menu():
                     qa.save_json_file('questions.json', data)
                     st.success("Question added successfully!")
 
+    # Deleting category
     elif menu_choice == "Delete Category":
         st.subheader("Delete Category")
         

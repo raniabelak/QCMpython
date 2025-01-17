@@ -62,7 +62,7 @@ def run_quiz(user_id, category):
         return
 
     # Calculating total time for the quiz
-    total_time = num_questions * 20
+    total_time = num_questions * 10
     print(f"You have {total_time} seconds to complete the quiz.")
 
     # Start the timer

@@ -1,63 +1,100 @@
 import json
 
-def add_category_or_question(file_path):
-    # Load the file or create it if it doesn't exist
+def load_json_file(file_path):
+    """Load JSON data from a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
+            if not data:  # Check if the file is empty
+                print("The file is empty.")
+                return {"categories": []}
+            return data
     except FileNotFoundError:
-        data = {"categories": []}
-    
+        print("File not found. A new file will be created.")
+        return {"categories": []}  # Return an empty structure if the file doesn't exist
+    except json.JSONDecodeError:
+        print("The file contains invalid JSON. A new structure will be created.")
+        return {"categories": []}  # Return an empty structure if JSON is invalid
+
+def save_json_file(file_path, data):
+    """Save data to a JSON file."""
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
+
+def add_category(file_path):
+    """Add a new category to the quiz."""
+    data = load_json_file(file_path)
+
     # Ask for the category name
-    category_name = input("Enter the category name: ").strip()
-    
-    # Check if the category exists
-    category = None
-    for cat in data["categories"]:
-        if cat["name"].lower() == category_name.lower():
-            category = cat
+    while True:
+        category_name = input("Enter the category name: ").strip()
+        if category_name:
             break
-    
-    if not category:
-        # Create a new category if it doesn't exist
-        new_category_id = 1 if not data["categories"] else data["categories"][-1]["id"] + 1
-        new_category = {
-            "id": new_category_id,
-            "name": category_name,
-            "questions": []
-        }
-        data["categories"].append(new_category)
-        category = new_category
-        print(f"Created new category '{category_name}' with ID {new_category_id}.")
-        
-        # Save the updated file immediately
-        with open(file_path, 'w', encoding='utf-8') as file:
-            json.dump(data, file, indent=2, ensure_ascii=False)
-    else:
-        print(f"Adding to existing category '{category_name}'.")
-    
-    # Ask if the user wants to add questions
-    add_question = input("Do you want to add a question to this category? (yes/no): ").strip().lower()
-    if add_question != "yes":
-        print("Category added successfully!")
+        print("Error: Category name cannot be empty.")
+
+    # Check if the category already exists
+    category = next((cat for cat in data["categories"] if cat["name"].lower() == category_name.lower()), None)
+
+    if category:
+        print(f"Category '{category_name}' already exists.")
         return
-    
+
+    # Create a new category
+    new_category_id = 1 if not data["categories"] else data["categories"][-1]["id"] + 1
+    new_category = {
+        "id": new_category_id,
+        "name": category_name,
+        "questions": []
+    }
+    data["categories"].append(new_category)
+    save_json_file(file_path, data)
+    print(f"Category '{category_name}' with ID {new_category_id} has been added successfully!")
+
+def add_question(file_path):
+    """Add a new question to an existing category."""
+    data = load_json_file(file_path)
+
+    # Show existing categories
+    print("Existing Categories:")
+    for category in data["categories"]:
+        print(f"{category['id']}. {category['name']}")
+
+    # Ask for category ID
+    while True:
+        try:
+            category_id = int(input("Enter the category ID to add a question: "))
+            break
+        except ValueError:
+            print("Error: Invalid input. Please enter a valid number.")
+
+    # Find the selected category
+    category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
+    if not category:
+        print("Category not found.")
+        return
+
     # Loop to add questions
     while True:
         question_text = input("Enter the question: ").strip()
+        if not question_text:
+            print("Error: Question cannot be empty.")
+            continue
+
         options = []
-        
-        # Get options
         for option_id in ["a", "b", "c", "d"]:
-            option_text = input(f"Enter option {option_id}: ").strip()
-            options.append({"id": option_id, "text": option_text})
-        
+            while True:
+                option_text = input(f"Enter option {option_id}: ").strip()
+                if option_text:
+                    options.append({"id": option_id, "text": option_text})
+                    break
+                print("Error: Option cannot be empty.")
+
         while True:
             correct_answer = input("Enter the correct answer (a, b, c, or d): ").strip().lower()
             if correct_answer in ["a", "b", "c", "d"]:
                 break
             print("Invalid input. Please enter one of: a, b, c, or d.")
-        
+
         # Add the question to the category
         question_id = len(category["questions"]) + 1
         category["questions"].append({
@@ -66,81 +103,84 @@ def add_category_or_question(file_path):
             "options": options,
             "correct_answer": correct_answer
         })
-        
-        # Ask if the user wants to add another question
-        add_more = input("Do you want to add another question? (yes/no): ").strip().lower()
-        if add_more != "yes":
+
+        while True:
+            add_more = input("Do you want to add another question? (yes/no): ").strip().lower()
+            if add_more in ["yes", "no"]:
+                break
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
+        if add_more == "no":
             break
 
     # Save the updated data to the file
-    with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
-    
-    print(f"Category '{category_name}' and its questions have been saved successfully!")
+    save_json_file(file_path, data)
+    print(f"Questions have been added to category '{category['name']}' successfully!")
 
-# fonction pour supprimer une catégorie
 def delete_category(file_path):
-    # load the file
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        print("File not found.")
-        return
+    """Delete a category from the quiz."""
+    data = load_json_file(file_path)
 
-    # Show categories 
+    # Show categories
     print("Categories:")
     for category in data["categories"]:
         print(f"{category['id']}. {category['name']}")
 
     # Ask for category ID to delete
-    category_id = int(input("Enter the category ID to delete: "))
-    category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
+    while True:
+        try:
+            category_id = int(input("Enter the category ID to delete: "))
+            break
+        except ValueError:
+            print("Error: Invalid input. Please enter a valid number.")
 
+    category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
     if category:
-        # Delete the category
         data["categories"].remove(category)
         print(f"Category '{category['name']}' has been deleted.")
+        save_json_file(file_path, data)
     else:
         print("Category not found.")
-    
-    # Save the file
-    with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
-    
-# fonction pour supprimer une question
-def delete_question(file_path):
-    try:
-        with open ((file_path), 'r', encoding='UTF-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        exit("File not found.")
 
+def delete_question(file_path):
+    """Delete a question from a category."""
+    data = load_json_file(file_path)
+
+    # Show categories
     print("Categories:")
     for category in data["categories"]:
         print(f"{category['id']}. {category['name']}")
-        
-    category_id = int(input("Enter the category ID: "))
+
+    # Ask for category ID
+    while True:
+        try:
+            category_id = int(input("Enter the category ID: "))
+            break
+        except ValueError:
+            print("Error: Invalid input. Please enter a valid number.")
+
     category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
-  
-    if category:
-        print("Questions:")
-        for question in category["questions"]:
-            print(f"{question['id']}. {question['question']}")
-        
-        question_id = int(input("Enter the question ID to delete: "))
-        question = next((q for q in category["questions"] if q["id"] == question_id), None)
-        
-        if question:
-            category["questions"].remove(question)
-            print("Question deleted successfully.")
-        else:
-            print("Question not found.")
-
-        with open(file_path, 'w', encoding='UTF-8') as file:
-            json.dump(data, file, indent=2, ensure_ascii=False)
-    else:
+    if not category:
         print("Category not found.")
+        return
 
-# add_category_or_question('questions.json')
-# delete_category('questions.json')
+    # Show questions in the selected category
+    print("Questions:")
+    for question in category["questions"]:
+        print(f"{question['id']}. {question['question']}")
+
+    # Ask for question ID to delete
+    while True:
+        try:
+            question_id = int(input("Enter the question ID to delete: "))
+            break
+        except ValueError:
+            print("Error: Invalid input. Please enter a valid number.")
+
+    question = next((q for q in category["questions"] if q["id"] == question_id), None)
+    if question:
+        category["questions"].remove(question)
+        print("Question deleted successfully.")
+        save_json_file(file_path, data)
+    else:
+        print("Question not found.")

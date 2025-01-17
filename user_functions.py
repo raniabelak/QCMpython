@@ -1,101 +1,78 @@
 import json
 
-# fonction pour vérifier si un utilisateur existe
-def user_exists(user_name, file_path):
+def load_json_file(file_path):
+    """Load JSON data from a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
+            return json.load(file)
     except FileNotFoundError:
-        exit("File not found.")
-    
-    user = next((usr for usr in data["users"] if usr["username"].lower() == user_name.lower()), None)
-    return user is not None
+        return {"users": []}  # Return an empty structure if the file doesn't exist
+    except json.JSONDecodeError:
+        return {"users": []}  # Return an empty structure if JSON is invalid
 
-# fonction pour ajouter un utilisateur
-def add_user(user_name, password, file_path):
-    try:
-        with open(file_path,'r',encoding='UTF-8') as file:
-            data = json.load(file)
-    except:
-        data = {"users": []}
+def save_json_file(file_path, data):
+    """Save data to a JSON file."""
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
+
+def user_exists(username, file_path):
+    """Check if a user exists in the JSON file."""
+    data = load_json_file(file_path)
+    return any(user["username"].lower() == username.lower() for user in data["users"])
+
+def add_user(username, password, file_path):
+    """Add a new user to the JSON file."""
+    data = load_json_file(file_path)
+
+    if user_exists(username, file_path):
+        print("Error: User already exists.")
+        return
 
     new_user_id = 1 if not data["users"] else data["users"][-1]["id"] + 1
-    
-    user = {
+    new_user = {
         "id": new_user_id,
-        "username": user_name,
+        "username": username,
         "password": password
     }
-    data["users"].append(user)
-
-    with open(file_path, 'w', encoding='UTF-8') as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
+    data["users"].append(new_user)
+    save_json_file(file_path, data)
     print("User added successfully.")
 
-    
-# fonction pour se connecter
-def login(user_name, password, file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)  
-    except FileNotFoundError:
-        exit("File not found.")
+def login(username, password, file_path):
+    """Authenticate a user."""
+    data = load_json_file(file_path)
+    user = next((user for user in data["users"] if user["username"].lower() == username.lower()), None)
+    return user is not None and user["password"] == password
 
-    user = next((usr for usr in data["users"] if usr["username"].lower() == user_name.lower()), None)
-    if user:
-        return user["password"] == password
-    else:
-        return False
-
-# Function to get user ID from username
-def get_user_id(username):
-    try:
-        with open('users.json', 'r', encoding='utf-8') as file:
-            users_data = json.load(file)
-    except FileNotFoundError:
-        print("No user data available.")
-        return None
-    except json.JSONDecodeError:
-        print("Error decoding JSON from 'users.json'.")
-        return None
-
-    user = next((u for u in users_data.get("users", []) if u['username'].lower() == username.lower()), None)
+def get_user_id(username, file_path):
+    """Get the user ID from the username."""
+    data = load_json_file(file_path)
+    user = next((user for user in data["users"] if user["username"].lower() == username.lower()), None)
     if user:
         return user['id']
     else:
         print(f"User '{username}' not found.")
         return None
 
-# Function to check the history of a user
 def check_history(user_id, file_path):
-    # Load the data directly from the file
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        print("Error: The history file is missing.")
-        return
-    except json.JSONDecodeError:
-        print("Error: The history file contains invalid JSON.")
-        return
-
-    # Ensure data is in the correct structure
+    """Check the game history of a user."""
+    data = load_json_file(file_path)
     if not isinstance(data, list):
-        print("Error: Invalid data structure. Expected a list of games.")
+        print("Error: Invalid data structure.")
         return
 
-    # Filter the history based on user_id
     user_history = [game for game in data if game['user_id'] == user_id]
+    if not user_history:
+        print("No history found.")
+        return
 
-    if user_history:
-        print("Your History :")
-        for index, game in enumerate(user_history, start=1):
-            print(f"{index}. Game {index}, Category: {game['category']}, Score: {game['score']}, Date: {game['date']}")
+    print("Your History:")
+    for index, game in enumerate(user_history, start=1):
+        print(f"{index}. Game {index}, Category: {game['category']}, Score: {game['score']}, Date: {game['date']}")
 
-        # Ask if the user wants to see the questions and answers
-        view_questions = input("\nDo you want to see the questions and answers? (yes/no): ").strip().lower()
-        if view_questions == "yes":
-            # Ask which game the user wants to view
+    view_questions = input("\nDo you want to see the questions and answers? (yes/no): ").strip().lower()
+    if view_questions == "yes":
+        while True:
             try:
                 game_choice = int(input("Which game? (Enter the game number): ").strip())
                 if 1 <= game_choice <= len(user_history):
@@ -105,9 +82,8 @@ def check_history(user_id, file_path):
                         print(f" - Question: {q['question']}")
                         print(f"   Your Answer: {q['user_answer']}")
                         print(f"   Correct: {'Yes' if q['is_correct'] else 'No'}")
+                    break
                 else:
                     print("Invalid game number.")
             except ValueError:
                 print("Invalid input. Please enter a valid game number.")
-    else:
-        print(f"No history found.")

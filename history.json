@@ -116,5 +116,350 @@
         ],
         "score": "1/10",
         "date": "2025-01-17 01:33:46.462746"
+    },
+    {
+        "id": 3,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following operators is used for exponentiation in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to remove leading whitespace from a string?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which data type can be used as a key in a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `assert` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `del` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "How can you check the type of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "How do you create a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following statements is used to import a specific function from a module?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "4/10",
+        "date": "2025-01-17 15:33:25.757137"
+    },
+    {
+        "id": 4,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following operators is used for exponentiation in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to remove leading whitespace from a string?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which data type can be used as a key in a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `assert` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `del` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "How can you check the type of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "How do you create a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following statements is used to import a specific function from a module?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "4/10",
+        "date": "2025-01-17 15:33:35.331437"
+    },
+    {
+        "id": 5,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which of the following functions is used to convert a string to an integer in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of `print([1, 2, 3] * 2)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will the following code output: `print(list(range(5)))`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print([1, 2, 3] + [4, 5, 6])`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which method is used to convert a string into a list of words in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the correct way to declare a function in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is a valid tuple in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the correct syntax to create a class in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "9/10",
+        "date": "2025-01-17 15:35:46.840127"
+    },
+    {
+        "id": 6,
+        "user_id": 8,
+        "category": "java",
+        "questions": [
+            {
+                "question": "Which method is used to find the length of an array in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is the correct syntax for the enhanced for loop in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following methods is used to check if a `Map` contains a specific key in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the default value of a reference variable in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the result of the expression `5 >> 2` in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is used to handle exceptions in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is true about method overloading in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What type of error is thrown when attempting to access an index out of bounds in an array?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which keyword in Java is used to prevent a class from being subclassed?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following access modifiers allows a class member to be accessed only within the same package?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `transient` keyword in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which exception is thrown when a division by zero occurs in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the difference between `StringBuilder` and `StringBuffer` in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following statements is true about `abstract` classes in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the default value of a boolean variable in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the purpose of the `super` keyword in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods can be used to stop a thread in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following is used to define a constant in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the result of the following expression: `5 + 2 * 3`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following classes is used for basic data I/O operations in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "13/20",
+        "date": "2025-01-17 15:36:28.651287"
+    },
+    {
+        "id": 7,
+        "user_id": 9,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 == 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to add an item to the end of a list in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function can be used to check if a number is an integer?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What will be the result of `print(10 // 3)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to round a number to the nearest integer?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following statements is used to handle exceptions in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of the following code: `print(2 ** 3 ** 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following statements is used to import a specific function from a module?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "6/10",
+        "date": "2025-01-17 15:37:07.197361"
     }
 ]

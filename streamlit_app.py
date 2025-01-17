@@ -1,11 +1,9 @@
 import streamlit as st
 import json
 import datetime
-from user_functions import user_exists, add_user, login, get_user_id
-import admin_functions as af
 import quiz_app as qa
-
-# Initialize session state variables to ensure default values are set for the user's session.
+import user_functions as uf
+# import admin_functions as af "There is no need of it bcs admin_functions are used to handle admin functions in terminal by input() and all"
 
 def init_session_state():
     if 'logged_in' not in st.session_state:
@@ -24,8 +22,6 @@ def init_session_state():
         st.session_state.quiz_started = False
     if 'selected_category' not in st.session_state:
         st.session_state.selected_category = None
-
-# Handles the quiz display and logic (starting the quiz,navigating questions,tracking the user's progress)
 
 def display_quiz(category, user_id):
     if not category or not category.get('questions'):
@@ -51,23 +47,19 @@ def display_quiz(category, user_id):
             st.session_state.score = 0
             st.session_state.user_answers = []
             st.session_state.quiz_started = True
-            # Initialize timer-related session states
             st.session_state.start_time = datetime.datetime.now()
-            st.session_state.total_time = num_questions * 10  # 10 seconds per question
+            st.session_state.total_time = num_questions * 20  # Setting 20 seconds per question as in quiz_app.py
             st.rerun()
     
     elif st.session_state.quiz_started:
-        # Clear the settings page content, i added it + it states to avoid displaying the settings after the quiz has started
         st.empty()
         
         questions = st.session_state.questions
         current_q = st.session_state.current_question
         
-        # Calculate remaining time
         elapsed_time = (datetime.datetime.now() - st.session_state.start_time).total_seconds()
         remaining_time = max(0, st.session_state.total_time - elapsed_time)
         
-        # Create three columns for the header
         col1, col2, col3 = st.columns([2, 1, 1])
         with col1:
             st.subheader(f"Question {current_q + 1}")
@@ -76,13 +68,11 @@ def display_quiz(category, user_id):
         with col3:
             st.subheader(f"Time: {int(remaining_time)}s")
         
-        # Display progress
         progress = st.progress((current_q) / len(questions))
         
-        # Check if time is up
         if remaining_time <= 0:
             st.error("Time's up! Quiz ended.")
-            st.session_state.current_question = len(questions)  # Skip to the end of the quiz
+            st.session_state.current_question = len(questions)
             st.rerun()
             return
         
@@ -92,7 +82,6 @@ def display_quiz(category, user_id):
             st.write("---")
             st.write(question['question'])
             
-            # Displaying options (currently radio buttons, may change to checkboxes)
             options = {opt['id']: opt['text'] for opt in question['options']}
             answer = st.radio(
                 "Choose your answer:",
@@ -100,7 +89,6 @@ def display_quiz(category, user_id):
                 format_func=lambda x: f"{x}) {options[x]}"
             )
             
-            # Create columns for navigation buttons
             col1, col2 = st.columns([1, 5])
             
             with col1:
@@ -119,21 +107,20 @@ def display_quiz(category, user_id):
                     st.rerun()
         
         else:
-            # Quiz finished
             final_score = st.session_state.score
             total_questions = len(questions)
             
             st.success(f"Quiz completed! Your score: {final_score}/{total_questions}")
             
-            # Store the quiz history (used from quiz_app.py file)
+            # Using qa.store_quiz_history directly
             qa.store_quiz_history(
                 user_id,
                 category['name'],
                 st.session_state.user_answers,
-                f"{final_score}/{total_questions}"
+                f"{final_score}/{total_questions}",
+                'history.json'
             )
             
-            # Display the full answers
             st.subheader("Review Your Answers")
             for i, (q, a) in enumerate(zip(questions, st.session_state.user_answers)):
                 correct_ans = next(opt['text'] for opt in q['options'] if opt['id'] == q['correct_answer'])
@@ -156,70 +143,51 @@ def display_quiz(category, user_id):
                 st.session_state.selected_category = None
                 st.rerun()
 
-# Display the quiz history for a specific user, including their answers, scores, and dates
-
 def view_history(user_id):
     try:
-        with open('history.json', 'r', encoding='utf-8') as file:
-            history_data = json.load(file)
-    except FileNotFoundError:
-        st.warning("No history available.")
-        return
-    except json.JSONDecodeError:
-        st.error("Error reading history data.")
-        return
+        history_data = qa.load_json_file('history.json')
+        if not history_data:
+            st.warning("No history available.")
+            return
+            
+        user_history = [game for game in history_data if game['user_id'] == user_id]
 
-    if not isinstance(history_data, list):
-        st.error("Invalid history data format.")
-        return
-
-# The ID of the logged-in user in user_id
-    user_history = [game for game in history_data if game['user_id'] == user_id]
-
-    if user_history:
-        st.subheader("Your Quiz History")
-        for index, game in enumerate(user_history, start=1):
-            with st.expander(f"Game {index}: {game['category']} - Score: {game['score']} - Date: {game['date']}"):
-                st.write("Questions and Answers:")
-                for q in game['questions']:
-                    st.write(f"Question: {q['question']}")
-                    st.write(f"Your answer: {q['user_answer']}")
-                    if q['is_correct']:
-                        st.success("Correct ✅")
-                    else:
-                        st.error("Incorrect ❌")
-                    st.write("---")
-    else:
-        st.info("No quiz history found.")
-
-# I added this fct for admin functionalities (adding/deleting categories and questions, anf ofc logging out of the admin account
+        if user_history:
+            st.subheader("Your Quiz History")
+            for index, game in enumerate(user_history, start=1):
+                with st.expander(f"Game {index}: {game['category']} - Score: {game['score']} - Date: {game['date']}"):
+                    st.write("Questions and Answers:")
+                    for q in game['questions']:
+                        st.write(f"Question: {q['question']}")
+                        st.write(f"Your answer: {q['user_answer']}")
+                        if q['is_correct']:
+                            st.success("Correct ✅")
+                        else:
+                            st.error("Incorrect ❌")
+                        st.write("---")
+        else:
+            st.info("No quiz history found.")
+    except Exception as e:
+        st.error(f"Error loading history: {str(e)}")
 
 def admin_menu():
     st.title("Admin Menu")
     
     menu_choice = st.sidebar.radio(
         "Admin Options",
-        ["Add Category/Question", "Delete Category", "Delete Question", "Logout"]
+        ["Add Category", "Add Question", "Delete Category", "Delete Question", "Logout"]
     )
     
-    if menu_choice == "Add Category/Question":
-        st.subheader("Add New Category or Question")
-        # Input for category
-        category_name = st.text_input("Enter category name:").strip()
-        
-        if st.button("Create/Select Category") and category_name:
-            try:
-                with open('questions.json', 'r', encoding='utf-8') as file:
-                    data = json.load(file)
-            except FileNotFoundError:
-                data = {"categories": []}
+    if menu_choice == "Add Category":
+        st.subheader("Add New Category")
+        category_name = st.text_input("Enter category name:")
+        if st.button("Add Category") and category_name:
+            data = qa.load_json_file('questions.json') or {"categories": []}
             
             # Check if category exists
-            category = next((cat for cat in data["categories"] 
-                           if cat["name"].lower() == category_name.lower()), None)
-            
-            if not category:
-                # Create new category
+            if any(cat["name"].lower() == category_name.lower() for cat in data["categories"]):
+                st.error("Category already exists!")
+            else:
                 new_category_id = 1 if not data["categories"] else data["categories"][-1]["id"] + 1
                 new_category = {
                     "id": new_category_id,
@@ -227,118 +195,125 @@ def admin_menu():
                     "questions": []
                 }
                 data["categories"].append(new_category)
-                with open('questions.json', 'w', encoding='utf-8') as file:
-                    json.dump(data, file, indent=2, ensure_ascii=False)
-                st.success(f"Created new category '{category_name}'")
-            else:
-                st.info(f"Category '{category_name}' already exists")
-            
-            st.session_state.current_category = category_name
+                qa.save_json_file('questions.json', data)
+                st.success(f"Category '{category_name}' added successfully!")
+
+    elif menu_choice == "Add Question":
+        st.subheader("Add Question")
         
-        # Add question form
-        if 'current_category' in st.session_state:
-            st.subheader("Add Question")
-            with st.form("add_question"):
-                question_text = st.text_input("Question:")
-                option_a = st.text_input("Option A:")
-                option_b = st.text_input("Option B:")
-                option_c = st.text_input("Option C:")
-                option_d = st.text_input("Option D:")
-                correct_answer = st.selectbox(
-                    "Correct Answer:",
-                    ["a", "b", "c", "d"]
-                )
-                
-                if st.form_submit_button("Add Question"):
-                    with open('questions.json', 'r', encoding='utf-8') as file:
-                        data = json.load(file)
+        # Load categories for selection
+        data = qa.load_json_file('questions.json') or {"categories": []}
+        categories = data.get("categories", [])
+        
+        if not categories:
+            st.warning("No categories available. Please create a category first.")
+            return
+            
+        # Category selection
+        category_names = [cat["name"] for cat in categories]
+        selected_category = st.selectbox("Select Category:", category_names)
+        
+        # Question input form
+        with st.form("add_question_form"):
+            question_text = st.text_input("Enter question:")
+            option_a = st.text_input("Option A:")
+            option_b = st.text_input("Option B:")
+            option_c = st.text_input("Option C:")
+            option_d = st.text_input("Option D:")
+            correct_answer = st.selectbox("Correct Answer:", ["a", "b", "c", "d"])
+            
+            submit_button = st.form_submit_button("Add Question")
+            
+            if submit_button:
+                if not all([question_text, option_a, option_b, option_c, option_d]):
+                    st.error("Please fill in all fields!")
+                else:
+                    # Find selected category
+                    category = next(cat for cat in categories if cat["name"] == selected_category)
                     
-                    category = next((cat for cat in data["categories"] 
-                                  if cat["name"].lower() == st.session_state.current_category.lower()), None)
+                    # Create new question
+                    question_id = len(category["questions"]) + 1
+                    new_question = {
+                        "id": question_id,
+                        "question": question_text,
+                        "options": [
+                            {"id": "a", "text": option_a},
+                            {"id": "b", "text": option_b},
+                            {"id": "c", "text": option_c},
+                            {"id": "d", "text": option_d}
+                        ],
+                        "correct_answer": correct_answer
+                    }
                     
-                    if category:
-                        question_id = len(category["questions"]) + 1
-                        new_question = {
-                            "id": question_id,
-                            "question": question_text,
-                            "options": [
-                                {"id": "a", "text": option_a},
-                                {"id": "b", "text": option_b},
-                                {"id": "c", "text": option_c},
-                                {"id": "d", "text": option_d}
-                            ],
-                            "correct_answer": correct_answer
-                        }
-                        category["questions"].append(new_question)
-                        
-                        with open('questions.json', 'w', encoding='utf-8') as file:
-                            json.dump(data, file, indent=2, ensure_ascii=False)
-                        st.success("Question added successfully!")
-    
+                    # Add question to category
+                    category["questions"].append(new_question)
+                    qa.save_json_file('questions.json', data)
+                    st.success("Question added successfully!")
+
     elif menu_choice == "Delete Category":
         st.subheader("Delete Category")
-        try:
-            with open('questions.json', 'r', encoding='utf-8') as file:
-                data = json.load(file)
-            
-            if data["categories"]:
-                categories = [f"{cat['id']}. {cat['name']}" for cat in data["categories"]]
-                selected = st.selectbox("Select category to delete:", categories)
-                
-                if st.button("Delete Category"):
-                    category_id = int(selected.split('.')[0])
-                    data["categories"] = [cat for cat in data["categories"] if cat["id"] != category_id]
-                    
-                    with open('questions.json', 'w', encoding='utf-8') as file:
-                        json.dump(data, file, indent=2, ensure_ascii=False)
-                    st.success("Category deleted successfully!")
-            else:
-                st.info("No categories available.")
-        except FileNotFoundError:
-            st.error("Questions file not found.")
-    
+        
+        # Load categories
+        data = qa.load_json_file('questions.json') or {"categories": []}
+        categories = data.get("categories", [])
+        
+        if not categories:
+            st.warning("No categories available.")
+            return
+        
+        # Display categories with their questions count
+        category_options = [f"{cat['name']} ({len(cat['questions'])} questions)" for cat in categories]
+        selected_category = st.selectbox("Select category to delete:", category_options)
+        
+        if st.button("Delete Category"):
+            category_name = selected_category.split(" (")[0]
+            data["categories"] = [cat for cat in categories if cat["name"] != category_name]
+            qa.save_json_file('questions.json', data)
+            st.success(f"Category '{category_name}' deleted successfully!")
+
     elif menu_choice == "Delete Question":
         st.subheader("Delete Question")
-        try:
-            with open('questions.json', 'r', encoding='utf-8') as file:
-                data = json.load(file)
-            
-            if data["categories"]:
-                categories = [f"{cat['id']}. {cat['name']}" for cat in data["categories"]]
-                selected_category = st.selectbox("Select category:", categories)
-                category_id = int(selected_category.split('.')[0])
-                
-                category = next((cat for cat in data["categories"] if cat["id"] == category_id), None)
-                if category and category["questions"]:
-                    questions = [f"{q['id']}. {q['question']}" for q in category["questions"]]
-                    selected_question = st.selectbox("Select question to delete:", questions)
-                    
-                    if st.button("Delete Question"):
-                        question_id = int(selected_question.split('.')[0])
-                        category["questions"] = [q for q in category["questions"] if q["id"] != question_id]
-                        
-                        with open('questions.json', 'w', encoding='utf-8') as file:
-                            json.dump(data, file, indent=2, ensure_ascii=False)
-                        st.success("Question deleted successfully!")
-                else:
-                    st.info("No questions available in this category.")
-            else:
-                st.info("No categories available.")
-        except FileNotFoundError:
-            st.error("Questions file not found.")
+        
+        # Load categories
+        data = qa.load_json_file('questions.json') or {"categories": []}
+        categories = data.get("categories", [])
+        
+        if not categories:
+            st.warning("No categories available.")
+            return
+        
+        # Category selection
+        category_names = [cat["name"] for cat in categories]
+        selected_category_name = st.selectbox("Select Category:", category_names)
+        
+        # Get selected category and its questions
+        category = next(cat for cat in categories if cat["name"] == selected_category_name)
+        questions = category.get("questions", [])
+        
+        if not questions:
+            st.warning("No questions available in this category.")
+            return
+        
+        # Question selection
+        question_options = [f"Q{q['id']}: {q['question']}" for q in questions]
+        selected_question = st.selectbox("Select question to delete:", question_options)
+        
+        if st.button("Delete Question"):
+            question_id = int(selected_question.split(":")[0][1:])
+            category["questions"] = [q for q in questions if q["id"] != question_id]
+            qa.save_json_file('questions.json', data)
+            st.success("Question deleted successfully!")
     
     elif menu_choice == "Logout":
         if st.button("Confirm Logout"):
             st.session_state.is_admin = False
             st.rerun()
 
-# Main entry function to handle the login/register process, user menu, and admin menu
-
 def main():
     init_session_state()
     
     if not st.session_state.logged_in and not st.session_state.is_admin:
-        st.title("Login/Register")
+        st.title("Quiz Application")
         login_tab, register_tab, admin_tab = st.tabs(["User Login", "Register", "Admin Login"])
         
         with login_tab:
@@ -346,7 +321,7 @@ def main():
             password = st.text_input("Password", type="password", key="user_password")
             
             if st.button("Login", key="user_login"):
-                if login(username, password, 'users.json'):
+                if uf.login(username, password, 'users.json'):
                     st.session_state.logged_in = True
                     st.session_state.username = username
                     st.rerun()
@@ -358,10 +333,10 @@ def main():
             new_password = st.text_input("New Password", type="password")
             
             if st.button("Register"):
-                if user_exists(new_username, 'users.json'):
+                if uf.user_exists(new_username, 'users.json'):
                     st.error("Username already exists!")
                 else:
-                    add_user(new_username, new_password, 'users.json')
+                    uf.add_user(new_username, new_password, 'users.json')
                     st.success("Registration successful! Please login.")
 
         with admin_tab:
@@ -387,7 +362,6 @@ def main():
         if menu_choice == "Take Quiz":
             categories = qa.load_quiz()
             if categories:
-                # Only show category selection if quiz hasn't started
                 if not st.session_state.quiz_started:
                     selected_category = st.selectbox(
                         "Choose a category:",
@@ -397,15 +371,16 @@ def main():
                     if selected_category:
                         st.session_state.selected_category = selected_category
                 
-                # Use the stored category for the quiz
                 if st.session_state.selected_category:
-                    display_quiz(st.session_state.selected_category, get_user_id(st.session_state.username))
+                    display_quiz(
+                        st.session_state.selected_category,
+                        uf.get_user_id(st.session_state.username, 'users.json')
+                    )
             else:
                 st.warning("No quiz data available.")
         
         elif menu_choice == "View History":
-            view_history(get_user_id(st.session_state.username))
-            # Reset quiz state when viewing history (to avoid conflicts)
+            view_history(uf.get_user_id(st.session_state.username, 'users.json'))
             st.session_state.quiz_started = False
             st.session_state.selected_category = None
         

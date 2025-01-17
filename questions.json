@@ -1,19 +1,43 @@
 {
-  "categories": [
-    {
-      "id": 2,
-      "name": "phy",
-      "questions": []
-    },
-    {
-      "id": 3,
-      "name": "foot",
-      "questions": []
-    },
-    {
-      "id": 4,
-      "name": "cat",
-      "questions": []
-    }
-  ]
+    "categories": [
+        {
+            "id": 1,
+            "name": "phy",
+            "questions": [
+                {
+                    "id": 1,
+                    "question": "this is a test?",
+                    "options": [
+                        {
+                            "id": "a",
+                            "text": "yes "
+                        },
+                        {
+                            "id": "b",
+                            "text": "now"
+                        },
+                        {
+                            "id": "c",
+                            "text": "maybe"
+                        },
+                        {
+                            "id": "d",
+                            "text": "maybe not"
+                        }
+                    ],
+                    "correct_answer": "a"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "cat",
+            "questions": []
+        },
+        {
+            "id": 3,
+            "name": "foot",
+            "questions": []
+        }
+    ]
 }

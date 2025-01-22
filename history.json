@@ -1261,5 +1261,123 @@
         ],
         "score": "6/10",
         "date": "2025-01-22 22:55:30.650051"
+    },
+    {
+        "id": 23,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which of the following is a valid tuple in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the correct syntax to create a class in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the result of the following operation: `x = 5; y = 2; print(x % y)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods can be used to remove an item from a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of `print([1, 2, 3] * 2)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following can be used as a key in a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which function can be used to check if a number is an integer?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the output of `print(3 * 'ab')`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 == 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "6/10",
+        "date": "2025-01-23 00:49:37.343287"
+    },
+    {
+        "id": 24,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "Which of the following statements will cause a syntax error?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the purpose of the `__init__` method in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which method is used to add an item to the end of a list in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of the following code snippet?\n`print(5 // 2)`",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the result of `print(10 // 3)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `assert` statement do in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of `print([1, 2, 3] * 2)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print('Hello, World!'[::-1])`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods can be used to remove an item from a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is used to implement a queue in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "7/10",
+        "date": "2025-01-23 00:54:22.919416"
     }
 ]

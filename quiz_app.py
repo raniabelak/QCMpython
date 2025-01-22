@@ -16,7 +16,6 @@ def get_base_path():
 # Resolves the full path for a file based on the base path
 def get_file_path(filename):
     return os.path.join(get_base_path(), filename)
-
 def load_json_file(filename):
     file_path = get_file_path(filename)
     """Load JSON data from a file."""
@@ -24,10 +23,11 @@ def load_json_file(filename):
         with open(file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
     except FileNotFoundError:
+        print(f"Error: File '{filename}' not found.")  # Debug print
         return {}  # Return an empty structure if the file doesn't exist
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON in '{filename}': {e}")  # Debug print
         return {}  # Return an empty structure if JSON is invalid
-
 def save_json_file(filename, data):
     file_path = get_file_path(filename)
     """Save data to a JSON file."""

@@ -3,8 +3,22 @@ import random
 import datetime
 import time
 import user_functions as uf
+import os
+import sys
 
-def load_json_file(file_path):
+# Dynamically resolves the base path for file operations
+def get_base_path():
+    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
+        return sys._MEIPASS  # use pyinstaller temp directory
+    else:
+        return os.path.dirname(os.path.abspath(__file__))  # use script directory
+
+# Resolves the full path for a file based on the base path
+def get_file_path(filename):
+    return os.path.join(get_base_path(), filename)
+
+def load_json_file(filename):
+    file_path = get_file_path(filename)
     """Load JSON data from a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -14,7 +28,8 @@ def load_json_file(file_path):
     except json.JSONDecodeError:
         return {}  # Return an empty structure if JSON is invalid
 
-def save_json_file(file_path, data):
+def save_json_file(filename, data):
+    file_path = get_file_path(filename)
     """Save data to a JSON file."""
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
@@ -24,8 +39,9 @@ def load_quiz():
     data = load_json_file('qcm.json')
     return data.get("categories", [])
 
-def store_quiz_history(user_id, category, user_answers, score, file_path):
+def store_quiz_history(user_id, category, user_answers, score, filename):
     """Store the user's quiz results in the history file."""
+    file_path = get_file_path(filename)
     history_data = load_json_file('history.json') or []
     history_id = len(history_data) + 1
     quiz_entry = {

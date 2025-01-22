@@ -1202,5 +1202,64 @@
         ],
         "score": "1/10",
         "date": "2025-01-17 18:02:47.611284"
+    },
+    {
+        "id": 22,
+        "user_id": 11,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the output of `print('Hello, World!'[::-1])`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What is the result of the following operation: `x = 5; y = 2; print(x % y)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which function is used to round a number to the nearest integer?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which function is used to get the length of an object in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will be the output of `print([1, 2, 3] * 2)`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which method is used to add an item to the end of a list in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What will the following code output: `print(2 + 3 * 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to remove the first occurrence of an item from a list in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print(3 == 2)`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following functions is used to convert a string to an integer in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            }
+        ],
+        "score": "6/10",
+        "date": "2025-01-22 22:55:30.650051"
     }
 ]

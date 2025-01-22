@@ -1,7 +1,23 @@
 import json
+import os
+import sys
 
-def load_json_file(file_path):
+# Dynamically resolves the base path for file operations
+def get_base_path():
+    if getattr(sys, 'frozen', False):  # Check if the script is running as an executable
+        return sys._MEIPASS  # use pyinstaller temp directory
+    else:
+        return os.path.dirname(os.path.abspath(__file__))  # use script directory
+
+# Resolves the full path for a file based on the base path
+def get_file_path(filename):
+    return os.path.join(get_base_path(), filename)
+
+
+def load_json_file(filename):
     """Load JSON data from a file."""
+    
+    file_path = get_file_path(filename)
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -16,13 +32,15 @@ def load_json_file(file_path):
         print("The file contains invalid JSON. A new structure will be created.")
         return {"categories": []}  # Return an empty structure if JSON is invalid
 
-def save_json_file(file_path, data):
+def save_json_file(filename, data):
     """Save data to a JSON file."""
+    file_path = get_file_path(filename)
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=2, ensure_ascii=False)
 
-def add_category(file_path):
+def add_category(filename):
     """Add a new category to the quiz."""
+    file_path = get_file_path(filename)
     data = load_json_file(file_path)
 
     # Ask for the category name
@@ -50,8 +68,9 @@ def add_category(file_path):
     save_json_file(file_path, data)
     print(f"Category '{category_name}' with ID {new_category_id} has been added successfully!")
 
-def add_question(file_path):
+def add_question(filename):
     """Add a new question to an existing category."""
+    file_path = get_file_path(filename)
     data = load_json_file(file_path)
 
     # Show existing categories
@@ -117,7 +136,8 @@ def add_question(file_path):
     save_json_file(file_path, data)
     print(f"Questions have been added to category '{category['name']}' successfully!")
 
-def delete_category(file_path):
+def delete_category(filename):
+    file_path = get_file_path(filename)
     """Delete a category from the quiz."""
     data = load_json_file(file_path)
 
@@ -142,7 +162,8 @@ def delete_category(file_path):
     else:
         print("Category not found.")
 
-def delete_question(file_path):
+def delete_question(filename):
+    file_path = get_file_path(filename)
     """Delete a question from a category."""
     data = load_json_file(file_path)
 

@@ -1379,5 +1379,123 @@
         ],
         "score": "7/10",
         "date": "2025-01-23 00:54:22.919416"
+    },
+    {
+        "id": 25,
+        "user_id": 8,
+        "category": "java",
+        "questions": [
+            {
+                "question": "What does the `super` keyword do in Java?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the purpose of the `transient` keyword in Java?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which Java collection class allows you to store key-value pairs?",
+                "user_answer": "d",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to read input from the console in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following Java features helps avoid multiple instances of a class?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which of the following methods is used to start a thread in Java?",
+                "user_answer": "b",
+                "is_correct": false
+            },
+            {
+                "question": "Which class is used to handle file input/output in Java?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "What will happen if you try to access an array element out of bounds in Java?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "What does the `this` keyword refer to in a Java class?",
+                "user_answer": "c",
+                "is_correct": false
+            },
+            {
+                "question": "Which keyword is used to declare a class that cannot be subclassed?",
+                "user_answer": "c",
+                "is_correct": false
+            }
+        ],
+        "score": "1/10",
+        "date": "2025-01-23 08:21:14.032174"
+    },
+    {
+        "id": 26,
+        "user_id": 8,
+        "category": "python",
+        "questions": [
+            {
+                "question": "What is the output of `print(3 * 'ab')`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following is a valid syntax for an infinite loop?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "How do you create a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following will remove the last item from a list?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print([1, 2, 3] + [4, 5, 6])`?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What does the `yield` keyword do in Python?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which function is used to round a number to the nearest integer?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "What is the output of `print('Hello, World!'[::-1])`?",
+                "user_answer": "a",
+                "is_correct": false
+            },
+            {
+                "question": "Which method is used to convert a string into a list of words in Python?",
+                "user_answer": "a",
+                "is_correct": true
+            },
+            {
+                "question": "Which of the following can be used as a key in a Python dictionary?",
+                "user_answer": "a",
+                "is_correct": false
+            }
+        ],
+        "score": "7/10",
+        "date": "2025-01-23 08:26:12.162915"
     }
 ]

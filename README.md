@@ -5,8 +5,37 @@ Welcome!
 This project provides a fun and interactive way to take quizzes and manage quiz data through an easy interface powered by Streamlit.
 
 ---
+# Streamlit App Executable
+
+This project bundles a Streamlit application into a standalone executable file. The executable allows users to run the Streamlit app locally without installing Python, Streamlit, or any dependencies.
+
+---
 
 ## Features
+
+- **Standalone Executable**: No need to install Python or Streamlit.
+- **Automatic Browser Launch**: Opens the Streamlit app in the default web browser.
+- **Cross-Platform**: Works on Windows, macOS, and Linux (requires building the executable for each platform).
+
+---
+
+## Requirements
+
+To build the executable, you need:
+
+- Python 3.7 or higher
+- PyInstaller (`pip install pyinstaller`)
+- Streamlit (`pip install streamlit`)
+
+---
+
+## How to Build the Executable
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
 
 - **User-Friendly Interface:**
   - User login and registration.

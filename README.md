@@ -1,180 +1,149 @@
-# Multiple-Choice Questionnaire (MCQ) Application for Computer Science Students
+# QCMpython
 
-### Realized by:
-- **BELAKEBI Rania**
-- **HESSAS Nassim**
-- **MAHMOUD Rayan**
-- **LAOUDI Farid**
+Welcome! 
+
+This project provides a fun and interactive way to take quizzes and manage quiz data through an easy interface powered by Streamlit.
 
 ---
-## How to Run the Project
+# Streamlit App Executable
 
-Follow these steps to run the **Multiple-Choice Questionnaire (MCQ)** Application:
-
-### Prerequisites
-Before running the project, ensure that you have the following installed on your system:
-- **Python 3.x**: Make sure you have Python installed. You can download it from the official website: [Python Downloads](https://www.python.org/downloads/).
-- **Git**: If you don't have Git installed, you can download it here: [Git Downloads](https://git-scm.com/downloads).
-
-### Clone the Repository
-Start by cloning the repository to your local machine using Git:
-```bash
-git clone https://github.com/raniabelak/QCMpython.git .
-
-###  Navigate into the project folder
-cd QCMpython
-```
-### Run the Application
-You can run the application in two ways:
-
-1. **Running from Source Code** 
-Execute the [main.py](./main.py) script directly using Python:
-```bash
-python main.py
-```
-2. **Running the Executable**
-Navigate to [the dist folder](./dist/):
-```bash
-cd dist
-```
-Execute the generated executable file:
-
-On Windows: Double-click the **[main.exe](./dist/main.exe)** file.
-
-On macOS/Linux: Run the executable from the terminal:
-```bash
-./main
-```
-
-## Building the Executable (Optional)
-
-If you want to create an executable for the project, follow these steps:
-
-### Install PyInstaller:
-```bash
-pip install pyinstaller
-```
-### Build the executable:
-```bash
-pyinstaller --onefile --add-data "users.json;." --add-data "history.json;." --add-data "qcm.json;." main.py
-```
-Note: Replace ; with : if you're on macOS or Linux.
-
-The executable will be generated in [the dist folder](./dist/).
-
-## Application Features
-### Admin Mode:
-- Add, delete, or modify categories and questions.
-- Accessible by entering the admin code (**Admin2025**).
-### User Mode:
-- Take quizzes, view history, and track performance.
-- Register or log in to save progress.
-# Project rapport
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [System Architecture](#system-architecture)
-3. [Data Management](#data-management)
-4. [Implementation Details](#implementation-details)
-    - [admin_functions.py](#admin_functionspy)
-    - [user_functions.py](#user_functionspy)
-    - [main.py](#mainpy)
-    - [quiz_app.py](#quiz_apypy)
-5. [Graphical Interface](#graphical-interface)
-6. [Conclusion](#conclusion)
+This project bundles a Streamlit application into a standalone executable file. The executable allows users to run the Streamlit app locally without installing Python, Streamlit, or any dependencies.
 
 ---
 
-## Project Overview
+## Features
 
-The **Multiple-Choice Questionnaire (MCQ)** Application is a comprehensive tool designed for computer science students. It not only allows users to take quizzes but also provides administrative functionalities for managing quiz content. Developed using Python, this project leverages the simplicity and versatility of the language, with JSON being used for data storage to ensure data persistence across sessions.
-
-### Key Features:
-- **User Authentication**: Secure access to the application.
-- **Quiz Management**: Allows users to take quizzes and view past performance with history tracking.
-- **Admin Functions**: Administrators can add or remove categories and questions dynamically.
-- **Data Storage**: Information is stored in structured JSON files (`users.json`, `qcm.json`, `history.json`), which handle user data, quiz questions, and history tracking respectively.
-
-This project stands out due to its modularity, ease of use, and robust data handling capabilities.
+- **Standalone Executable**: No need to install Python or Streamlit.
+- **Automatic Browser Launch**: Opens the Streamlit app in the default web browser.
+- **Cross-Platform**: Works on Windows, macOS, and Linux (requires building the executable for each platform).
 
 ---
 
-## System Architecture
+## Requirements
 
-The application is structured into different components that separate the responsibilities for a clean and manageable codebase.
+To build the executable, you need:
 
-- **main.py**: The entry point of the application that handles user authentication and navigates users to their respective interfaces (user or admin).
-- **quiz_app.py**: Manages quiz execution, including question presentation, user input handling, and score calculation.
-- **admin_functions.py**: Contains administrative functionalities such as adding or deleting quiz categories and questions.
-- **user_functions.py**: Handles user management tasks such as registration, login, and authentication.
-
-### Data Files:
-- **users.json**: Stores user details, including usernames and passwords.
-- **qcm.json**: Contains the categories and questions for quizzes.
-- **history.json**: Tracks the history of quiz attempts, including scores, attempted questions, and dates.
+- Python 3.7 or higher
+- PyInstaller (`pip install pyinstaller`)
+- Streamlit (`pip install streamlit`)
 
 ---
 
-## Data Management
+## How to Build the Executable
 
-### Why JSON?
+1. **Clone the Repository**
 
-JSON (JavaScript Object Notation) is used for data management due to the following reasons:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
 
-- **Structured and Readable**: JSON offers a structured format that is easy to read and understand.
-- **Language-Independent**: JSON is language-agnostic, making it versatile for potential future expansions in other programming languages.
-- **Ease of Use in Python**: Python's built-in `json` module simplifies converting between JSON and Python data structures (e.g., dictionaries and lists).
-- **Lightweight**: JSON is efficient for reading and writing data, ideal for small to medium-sized applications.
-- **Human-Readable**: JSON is easy to inspect and modify, which is beneficial for debugging and version control.
-  
-While JSON is a great fit for this project, it may need to be replaced with a more scalable solution like a database for larger projects.
+- **User-Friendly Interface:**
+  - User login and registration.
+  - Admin login for managing quizzes.
 
----
+- **Quiz Features:**
+  - Select categories and set the number of questions.
+  - Timer and progress tracking.
+  - Immediate score calculation and answer review.
 
-## Implementation Details
+- **Admin Functionalities:**
+  - Add, delete categories and questions.
+  - Manage quiz data efficiently.
 
-### admin_functions.py
-Contains functions for managing quiz content:
-- **add_category_or_question**: Adds new categories or questions to `qcm.json`.
-- **delete_category**: Deletes categories or questions from `qcm.json`.
-
-### user_functions.py
-Handles user management tasks:
-- **user_exists**: Checks if a user exists in `users.json`.
-- **add_user**: Registers a new user.
-- **login**: Authenticates users based on their username and password.
-
-### main.py
-The main entry point of the application:
-- Manages user authentication and directs users to either the user or admin interface.
-
-### quiz_app.py
-Handles quiz functionality:
-- Presents questions to users, records answers, and calculates scores.
-- Updates `history.json` with the results of the quiz.
+- **History Tracking:**
+  - View previous quiz attempts and scores.
 
 ---
 
-## Graphical Interface
+## Requirements
 
-The application features a simple and intuitive interface that facilitates easy interaction for both users and administrators. The design focuses on accessibility and ease of use, ensuring that users can navigate through quizzes, view past performance, and interact with admin functionalities with minimal complexity.
-
----
-
-## Conclusion
-
-The **Multiple-Choice Questionnaire (MCQ) Application** successfully implements a functional quiz system with both user and administrative functionalities. It serves as a solid foundation for educational quizzes, with potential for future enhancements such as improved security features and advanced functionalities.
-
----
-
-## Github Repository
-
-You can find the project repository here: [QCMpython on GitHub](https://github.com/raniabelak/QCMpython)
+- **Python 3.7+**
+- Libraries:
+  - `streamlit`
+  - `json`
+  - `datetime`
+  - `time`
+  - `random`
 
 ---
 
-### Credits
+## Installation
 
-The project was developed as part of the Advanced Programming course for 3rd-year Computer Science (Cybersecurity) students at USTHB.
+1. **Clone the Repository:**
+   You need to clone this repository first so you can run this project
+
+2. **Install Dependencies:**
+   Before starting, you need to install the streamlit library, it's very easy and simple, all you have to do is running this command in cmd, don't forget to **run is as administrator**:
+   ```bash
+   pip install streamlit
+   ```
+   After installation, verify by running the following command:
+   ```bash
+   pip show streamlit
+   ```
+
+3. **Run the Application:**
+   Finally, to start the Streamlit application, use the command:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+4. **Access the App:**
+   Open your browser and navigate to the URL shown in your terminal (usually `http://localhost:8501`).
 
 ---
 
+## How to Use
+
+### For Users
+
+1. **Login or Register:**
+   - Open the app and either log in with your existing credentials or register as a new user.
+
+2. **Take a Quiz:**
+   - Select the "Take Quiz" option from the sidebar.
+   - Choose a category and configure your quiz settings.
+   - Answer the questions within the time limit, initially you will get 10 seconds per questions.
+
+3. **Results & Feedbacks:**
+   - After completing each question of quiz, view your score and review the correct and incorrect answers by checking the styling colors (red if answer incorrect, green if answer correct).
+
+4. **View History:**
+   - Use the "View History" option to see your past quiz attempts.
+
+### For Admins
+
+1. **Login as Admin:**
+   - Enter the admin code (default: `admin2025`) in the admin login tab.
+
+2. **Manage Quizzes:**
+   - Use the admin menu to add or delete categories and questions. (the qcm/quiz questions are modified in questions.json instead of qcm.json, to verify the data manipulation and ensure that the user doesn't delete from our main collected quiz questions in qcm.json)
+   - Ensure questions have clear options and a correct answer specified.
+
+3. **Logout:**
+   - Use the "Logout" option to exit admin mode securely.
+
+---
+
+## Notes
+
+- Ensure you have the `questions.json` and `users.json` files in the same directory as the app for proper functionality.
+- The app stores user and quiz data in JSON format. Handle these files carefully to avoid data loss.
+
+---
+
+## Troubleshooting
+
+- **Streamlit Command Not Found:** Ensure Streamlit is installed by running:
+  ```bash
+  pip install streamlit
+  ```
+
+- **Port Issues:** If the default port `8501` is busy, specify a new port:
+  ```bash
+  streamlit run streamlit_app.py --server.port=8502
+  ```
+
+---
+
+Thank you for using our app, enjoy!

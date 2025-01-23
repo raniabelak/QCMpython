@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "username": "mohamed",
-      "password": "123456"
+      "username": "Alice",
+      "password": "1234"
     },
     {
       "id": 2,
@@ -27,8 +27,33 @@
     },
     {
       "id": 6,
-      "username": "farid",
+      "username": "newlog",
       "password": "1234"
+    },
+    {
+      "id": 7,
+      "username": "rayan",
+      "password": "1234"
+    },
+    {
+      "id": 8,
+      "username": "farid",
+      "password": "sahelsahel"
+    },
+    {
+      "id": 9,
+      "username": "test",
+      "password": "1234"
+    },
+    {
+      "id": 10,
+      "username": "final boss",
+      "password": "1234"
+    },
+    {
+      "id": 11,
+      "username": "jdid",
+      "password": "123"
     }
   ]
 }

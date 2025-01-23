@@ -1,0 +1,19 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "phy",
+            "questions": []
+        },
+        {
+            "id": 2,
+            "name": "nassim",
+            "questions": []
+        },
+        {
+            "id": 3,
+            "name": "farid",
+            "questions": []
+        }
+    ]
+}

@@ -1,127 +1,78 @@
 import json
-import os
-import sys
 
-def get_base_path():
-    if getattr(sys, 'frozen', False):
-        return sys._MEIPASS
-    else:
-        return os.path.dirname(os.path.abspath(__file__)) 
-
-def get_file_path(filename):
-
-    return os.path.join(get_base_path(), filename)
-
-def user_exists(user_name, file_name):
-
-    file_path = get_file_path(file_name)  
+def load_json_file(file_path):
+    """Load JSON data from a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
+            return json.load(file)
     except FileNotFoundError:
-        print("Error: The users file is missing.")
-        return False
+        return {"users": []}  # Return an empty structure if the file doesn't exist
     except json.JSONDecodeError:
-        print("Error: The users file contains invalid JSON.")
-        return False
+        return {"users": []}  # Return an empty structure if JSON is invalid
 
-    user = next((usr for usr in data["users"] if usr["username"].lower() == user_name.lower()), None)
-    return user is not None
+def save_json_file(file_path, data):
+    """Save data to a JSON file."""
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
 
-def add_user(user_name, password, file_name):
+def user_exists(username, file_path):
+    """Check if a user exists in the JSON file."""
+    data = load_json_file(file_path)
+    return any(user["username"].lower() == username.lower() for user in data["users"])
 
-    file_path = get_file_path(file_name) 
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        data = {"users": []}
-    except json.JSONDecodeError:
-        print("Error: The users file contains invalid JSON.")
+def add_user(username, password, file_path):
+    """Add a new user to the JSON file."""
+    data = load_json_file(file_path)
+
+    if user_exists(username, file_path):
+        print("Error: User already exists.")
         return
 
     new_user_id = 1 if not data["users"] else data["users"][-1]["id"] + 1
-    
-    user = {
+    new_user = {
         "id": new_user_id,
-        "username": user_name,
+        "username": username,
         "password": password
     }
-    data["users"].append(user)
-
-    with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
+    data["users"].append(new_user)
+    save_json_file(file_path, data)
     print("User added successfully.")
 
-def login(user_name, password, file_name):
+def login(username, password, file_path):
+    """Authenticate a user."""
+    data = load_json_file(file_path)
+    user = next((user for user in data["users"] if user["username"].lower() == username.lower()), None)
+    return user is not None and user["password"] == password
 
-    file_path = get_file_path(file_name)  # Resolve the file path
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        print("Error: The users file is missing.")
-        return False
-    except json.JSONDecodeError:
-        print("Error: The users file contains invalid JSON.")
-        return False
-
-    user = next((usr for usr in data["users"] if usr["username"].lower() == user_name.lower()), None)
-    if user:
-        return user["password"] == password
-    else:
-        return False
-
-def get_user_id(username, file_name):
-
-    file_path = get_file_path(file_name)  # Resolve the file path
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            users_data = json.load(file)
-    except FileNotFoundError:
-        print("Error: The users file is missing.")
-        return None
-    except json.JSONDecodeError:
-        print("Error: The users file contains invalid JSON.")
-        return None
-
-    user = next((u for u in users_data.get("users", []) if u['username'].lower() == username.lower()), None)
+def get_user_id(username, file_path):
+    """Get the user ID from the username."""
+    data = load_json_file(file_path)
+    user = next((user for user in data["users"] if user["username"].lower() == username.lower()), None)
     if user:
         return user['id']
     else:
         print(f"User '{username}' not found.")
         return None
 
-def check_history(user_id, file_name):
-
-    file_path = get_file_path(file_name)  # Resolve the file path
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        print("Error: The history file is missing.")
-        return
-    except json.JSONDecodeError:
-        print("Error: The history file contains invalid JSON.")
-        return
-
-    # Ensure data is in the correct structure
+def check_history(user_id, file_path):
+    """Check the game history of a user."""
+    data = load_json_file(file_path)
     if not isinstance(data, list):
-        print("Error: Invalid data structure. Expected a list of games.")
+        print("Error: Invalid data structure.")
         return
 
-    # Filter the history based on user_id
     user_history = [game for game in data if game['user_id'] == user_id]
+    if not user_history:
+        print("No history found.")
+        return
 
-    if user_history:
-        print("Your History:")
-        for index, game in enumerate(user_history, start=1):
-            print(f"{index}. Game {index}, Category: {game['category']}, Score: {game['score']}, Date: {game['date']}")
+    print("Your History:")
+    for index, game in enumerate(user_history, start=1):
+        print(f"{index}. Game {index}, Category: {game['category']}, Score: {game['score']}, Date: {game['date']}")
 
-        # Ask if the user wants to see the questions and answers
-        view_questions = input("\nDo you want to see the questions and answers? (yes/no): ").strip().lower()
-        if view_questions == "yes":
-            # Ask which game the user wants to view
+    view_questions = input("\nDo you want to see the questions and answers? (yes/no): ").strip().lower()
+    if view_questions == "yes":
+        while True:
             try:
                 game_choice = int(input("Which game? (Enter the game number): ").strip())
                 if 1 <= game_choice <= len(user_history):
@@ -131,30 +82,8 @@ def check_history(user_id, file_name):
                         print(f" - Question: {q['question']}")
                         print(f"   Your Answer: {q['user_answer']}")
                         print(f"   Correct: {'Yes' if q['is_correct'] else 'No'}")
+                    break
                 else:
                     print("Invalid game number.")
             except ValueError:
                 print("Invalid input. Please enter a valid game number.")
-    else:
-        print("No history found.")
-
-# Example usage
-if __name__ == "__main__":
-    users_file = "users.json"  # Replace with your users file name
-    history_file = "history.json"  # Replace with your history file name
-
-    add_user("test_user", "password123", users_file)
-
-    if user_exists("test_user", users_file):
-        print("User exists!")
-
-    if login("test_user", "password123", users_file):
-        print("Login successful!")
-    else:
-        print("Login failed.")
-
-    user_id = get_user_id("test_user", users_file)
-    if user_id:
-        print(f"User ID: {user_id}")
-
-    check_history(user_id, history_file)

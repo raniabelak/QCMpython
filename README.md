@@ -117,7 +117,7 @@ To build the executable, you need:
    - Enter the admin code (default: `admin2025`) in the admin login tab.
 
 2. **Manage Quizzes:**
-   - Use the admin menu to add or delete categories and questions. (the qcm/quiz questions are modified in questions.json instead of qcm.json, to verify the data manipulation and ensure that the user doesn't delete from our main collected quiz questions in qcm.json)
+   - Use the admin menu to add or delete categories and questions. (the qcm/quiz questions are modified in qcm.json instead of qcm.json, to verify the data manipulation and ensure that the user doesn't delete from our main collected quiz questions in qcm.json)
    - Ensure questions have clear options and a correct answer specified.
 
 3. **Logout:**
@@ -127,7 +127,7 @@ To build the executable, you need:
 
 ## Notes
 
-- Ensure you have the `questions.json` and `users.json` files in the same directory as the app for proper functionality.
+- Ensure you have the `qcm.json` and `users.json` files in the same directory as the app for proper functionality.
 - The app stores user and quiz data in JSON format. Handle these files carefully to avoid data loss.
 
 ---

@@ -277,7 +277,7 @@ def admin_menu():
         st.subheader("Add New Category")
         category_name = st.text_input("Enter category name:")
         if st.button("Add Category") and category_name:
-            data = qa.load_json_file('questions.json') or {"categories": []}
+            data = qa.load_json_file('qcm.json') or {"categories": []}
             
             # Check if category exists
             if any(cat["name"].lower() == category_name.lower() for cat in data["categories"]):
@@ -290,7 +290,7 @@ def admin_menu():
                     "questions": []
                 }
                 data["categories"].append(new_category)
-                qa.save_json_file('questions.json', data)
+                qa.save_json_file('qcm.json', data)
                 st.success(f"Category '{category_name}' added successfully!")
 
     # Adding new question
@@ -298,7 +298,7 @@ def admin_menu():
         st.subheader("Add Question")
         
         # Load categories for selection
-        data = qa.load_json_file('questions.json') or {"categories": []}
+        data = qa.load_json_file('qcm.json') or {"categories": []}
         categories = data.get("categories", [])
         
         if not categories:
@@ -343,7 +343,7 @@ def admin_menu():
                     
                     # Add question to category
                     category["questions"].append(new_question)
-                    qa.save_json_file('questions.json', data)
+                    qa.save_json_file('qcm.json', data)
                     st.success("Question added successfully!")
 
     # Deleting category
@@ -351,7 +351,7 @@ def admin_menu():
         st.subheader("Delete Category")
         
         # Load categories
-        data = qa.load_json_file('questions.json') or {"categories": []}
+        data = qa.load_json_file('qcm.json') or {"categories": []}
         categories = data.get("categories", [])
         
         if not categories:
@@ -365,14 +365,14 @@ def admin_menu():
         if st.button("Delete Category"):
             category_name = selected_category.split(" (")[0]
             data["categories"] = [cat for cat in categories if cat["name"] != category_name]
-            qa.save_json_file('questions.json', data)
+            qa.save_json_file('qcm.json', data)
             st.success(f"Category '{category_name}' deleted successfully!")
 
     elif menu_choice == "Delete Question":
         st.subheader("Delete Question")
         
         # Load categories
-        data = qa.load_json_file('questions.json') or {"categories": []}
+        data = qa.load_json_file('qcm.json') or {"categories": []}
         categories = data.get("categories", [])
         
         if not categories:
@@ -398,7 +398,7 @@ def admin_menu():
         if st.button("Delete Question"):
             question_id = int(selected_question.split(":")[0][1:])
             category["questions"] = [q for q in questions if q["id"] != question_id]
-            qa.save_json_file('questions.json', data)
+            qa.save_json_file('qcm.json', data)
             st.success("Question deleted successfully!")
     
     elif menu_choice == "Logout":

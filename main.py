@@ -14,13 +14,13 @@ def admin_menu():
         choice = input("Enter your choice: ").strip()
 
         if choice == "1":
-            af.add_category('questions.json')
+            af.add_category('qcm.json')
         elif choice == "2" :
-            af.add_question('questions.json')
+            af.add_question('qcm.json')
         elif choice == "3":
-            af.delete_category('questions.json')
+            af.delete_category('qcm.json')
         elif choice == "4":
-            af.delete_question('questions.json')
+            af.delete_question('qcm.json')
         elif choice == "5":
             break
         else:

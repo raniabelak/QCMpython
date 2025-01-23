@@ -92,7 +92,7 @@ def display_quiz(category, user_id):
             st.session_state.user_answers = []
             st.session_state.quiz_started = True
             st.session_state.start_time = datetime.datetime.now()
-            st.session_state.total_time = num_questions * 1 # 10 seconds per question, change here if you want to test the time
+            st.session_state.total_time = num_questions * 10# 10 seconds per question, change here if you want to test the time
             st.session_state.answer_submitted = False
             st.session_state.quiz_completed = False  # status added to prevent multiple history entries, we'll try and see hopefully it works (it worked yay)
             st.rerun()
